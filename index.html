@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Oma Sivusto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <!-- Voit lisätä muita <link> -tageja tähän, esimerkiksi fontteja tai muita tyylitiedostoja -->
+    <!-- Voit lisätä <script> -tageja tähän, esimerkiksi JavaScript-tiedostoja -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sisältö tähän -->
+    <header>
+        <div class="header-container">
+            <p class="info">Tieto- ja viestintätekniikka (ICT) <br> Ohjelmistokehittäjä opiskelija <br> Hyria Koulutus</p>
+            <p class="otsikko">Oma Sivusto
+        <br>Ron Gustafsson</p>
+        </div>
+    </header>
+
+    <nav class="nav_container">
+        
+        <p class="nav_otsikko">Tästä pääset harjoitustehtäviini <br> HTML/CSS/BOOTSTRAP</p>
+        
+        
+        <ul class="ul-linkit">
+            <li class="linkit"><a href="HTML/pannukakku.html">Pannukakku</a></li>
+            <li class="linkit"><a href="HTML/ajanvarauslomake.html">Ajanvarauslomake</a></li>
+            <li class="linkit"><a href="HTML/kirpputaulu.html">Kirpputaulu</a></li>
+            <li class="linkit"><a href="HTML/parkkipaikka.html">Parkkipaikka</a></li>
+            <li class="linkit"><a href="HTML/semanttiset_tagit.html">Semanttiset tagit</a></li>
+            <li class="linkit"><a href="HTML/navigointi.html">Navigointi</a></li>
+            <li class="linkit"><a href="HTML/varilaatikot.html">Värilaatikot</a></li>
+            <li class="linkit"><a href="HTML/taulukko_harjoitus.html">Taulukko harjoitus</a></li>
+        </ul>
+    </nav>
+    
+    <main class="main_container">
+        <section>
+            <p class="main_otsikko_teksti"><b>Pannukakku:</b><em> 
+                
+            <p class="main_perus"> - HTML/CSS rungon rakentelua, linkitys CSS tiedostoon.<br> - Semanttiset tagit haltuun ja tekstin kirjoitus niiden sisälle <strong> (header, main, section, footer)</strong>. <br>- Kuvatiedoston lisääminen sivulle.<br> - Lista-elementeillä harjoittelua.</em> </p>
+        </section>
+
+        <section>           
+            <p class="main_otsikko_teksti"><b>Ajanvarauslomake:</b></p>
+
+            <ul>
+                <li class="ul-main"><strong>&lt;form&gt;:</strong> lomake-elementti, joka ympäröi kaikki lomakkeen osat</li>
+
+                <li class="ul-main"><strong>&lt;label&gt;:</strong> käytetty kenttien nimien määrittelyyn</li>
+
+                <li class="ul-main"><strong>&lt;input&gt;:</strong> tekstikentät sähköpostille ja päivämäärälle sekä valintaruudut ajalle</li>
+
+                <li class="ul-main"><strong>&lt;select&gt;</strong> ja <strong>&lt;option&gt;:</strong> luotu valintalista ja sen vaihtoehdot</li>
+
+                <li class="ul-main"><strong>attribuutit:</strong> oikeat tietotyypit kullekin kentälle, esimerkiksi <strong>&lt;input</strong> sähköpostille <strong> type="email"></strong> ja päivämäärälle <strong>type="date"></strong></li>   
+            </ul>
+
+            <p class="main_perus"><em>- Kentät asetettiin pakolliseksi lomakkeen lähettämiseen <strong>(reguired)</strong> ja luotiin "Lähetä-nappi" <strong>&lt;input type="submit"&gt;</strong>.<br> - Form-tagista jätettiin <strong>action-attribuutti</strong> pois, jotta selaimen osoitekentästä näkyy lähetettävät tiedot.<br>- Kaikki tiedot tallentuivat osoitekenttään, vaikka niitä ei oikeasti palvelimelle lähetettykään. </em></p>
+        </section>
+
+        <section>
+            <p class="main_otsikko_teksti"><b>Kirpputaulu:</b></p>
+
+            <p class="main_perus">- Tehtävän aloitin piirtämällä GIMP:llä "hienon" kirppu kuvan. Ei niinkään se kuvan ulkonäkö vaan miten eli kuva kokoa 100 x 100 px ja läpinäkyvä tausta (transparent) ja kuva .png muotoon.<br>
+            &nbsp;&nbsp;HTML & CSS:
+            <ul>
+
+                <li class="ul-main"><strong>&lt;table&gt;:</strong>  luotiin kirpputaulu-luokalla ja sen sisältö rakennettiin käyttämällä <strong>&lt;tr&gt;</strong> ja <strong>&lt;td&gt;</strong>-elementtejä.<br>
+                Taulukon yläosa sisältää rivin, jossa on yksi otsikkosolu <strong>&lt;th&gt;</strong>, joka yhdistää neljä saraketta <strong>colspan="4"</strong></li>
+                
+                <li class="ul-main"> kaksi sisältöriviä määriteltiin, joissa vuorottelevat tekstit ja kuvat, kummassakin neljä solua </li>
+
+                <li class="ul-main"> otsikkosolujen <strong>&lt;th&gt;</strong> tyylit määriteltiin, kuten reunat, taustavärit, tekstin koot ja värit, sekä korkeus </li>
+
+                <li class="ul-main"> sisältösolujen <strong>.flea-luokka</strong> tyylit määriteltiin, kuten reunat, taustavärit, tekstin koot ja värit, sekä korkeus </li>
+
+                <li class="ul-main"> parittomille ja parillisille soluille määriteltiin erilaiset taustavärit ja tekstin värit käyttämällä <strong>nth-child</strong> -valitsinta</li>
+                </p>
+            </ul>
+        </section>
+        
+        <section>
+
+            <p class="main_otsikko_teksti"><b>Parkkipaikka:</b></p>
+
+                <p class="main_perus">
+                    - Sivuston rakenne suunniteltiin semanttisesti ja tyylikkäästi HTML:n ja CSS:n avulla. HTML-puolella luotiin otsikko, navigointipalkki, parkkipaikkataulukko, takaisin-linkki ja alatunniste.<br> - Navigointilinkit asetettiin lohkoelementeiksi ja taulukko keskitettiin.
+
+                    CSS:llä määriteltiin perusasetukset, kuten fontit, marginaalit ja taustavärit.<br> - Otsikolle, navigointipalkille, taulukolle ja alatunnisteelle asetettiin erilliset tyylit, jotka sisälsivät värityksiä, marginaaleja ja reunaviivoja.<br> - Takaisin-linkille lisättiin hover-efekti ja pyöristetyt kulmat. Lopuksi, CSS:llä parannettiin sivun ulkoasua ja käytettävyyttä eri näyttöleveyksillä.  
+                </p>
+
+                <p class="main_otsikko_teksti"><b>Semanttiset tagit:</b></p>
+
+                <p class="main_perus">
+                    - Tehtävässä luotiin HTML-sivu, joka käytti semanttisia HTML5-tägejä sivun rakenteen määrittämiseen. Tehtävän tarkoituksena oli hahmottaa sivun eri osioiden käyttötarkoitusta ja niiden sijoittumista sivulla.<br>
+
+                    - HTML-rungolle asetettiin korkeus 100%, jotta sivu täyttäisi koko selainikkunan.<br>
+                    
+                    - Semanttisten tägien korkeutta ja leveyttä määriteltiin prosentuaalisesti ja sijoittumista <b>float:</b><br>
+                    
+                    - CSS-tyylit määriteltiin eri osioille, mukaan lukien taustavärit, reunat ja fontit.<br> 
+                    
+                    - Lisäksi sivulle lisättiin hover-efekti navigointilinkkiin parantamaan käytettävyyttä.<br> 
+                    
+                    - Sivuston ulkoasu suunniteltiin responsiiviseksi varmistamaan, että se näyttää hyvältä eri näyttölaitteilla.<br> 
+                </p>
+        </section>
+
+        <section>
+            <p class="main_otsikko_teksti"><b>Navigointi:</b></p>
+
+                <p class="main_perus">
+                - Tässä harjoituksessa tehtävänä oli luoda HTML-sivu, jossa on useita navigointivalikoita ja harjoitella niiden sijoittelua taulukoiden avulla.</p>
+
+                <ul>
+                    <li class="ul-main">luotiin vaakasuoria valikoita käyttämällä epäjärjestettyä listaa <strong>&lt;ul&gt;</strong> ja listan osia <strong>&lt;li&gt;</strong>
+
+                    <li class="ul-main"> jokaiseen listan osaan lisättiin linkki <strong>&lt;a&gt;</strong>
+
+                    <li class="ul-main"> vaakasuorissa valikoissa linkit kellutettiin vasemmalle ja niille annettiin yhtenäinen leveys ja reunus
+
+                    <li class="ul-main"> pystysuorassa valikossa listan osat (linkit) asetettiin pystysuoraan näyttötilalla <strong>display: list-item;</strong>
+
+                    <li class="ul-main">linkkien pseudovalitsimen <strong>:hover</strong> -tilan harjoittelua</li>
+                </ul>
+                            
+                <ul class="lista_hover">
+                    <li>yleisin hover-efekti on värin muutos, kuten tekstin tai taustan värin vaihtaminen,<br> tämä antaa käyttäjälle selkeän vihjeen siitä, että elementti on vuorovaikutteinen
+                                
+                    <li>voidaan lisätä tai muuttaa reunuksia tai varjoja hover-tilassa, mikä luo syvyysvaikutelman ja tekee elementistä erottuvamman. <br>
+
+                    <li>siirtymät (transitions) tekevät hover-efektistä sujuvamman lisäämällä viiveen tai animaation. Tämä parantaa visuaalista vaikutelmaa.
+
+                    <li>voidaan muuttaa elementin kokoa, muuttaa sen muotoa tai pyöristää sen kulmia hover-tilassa
+
+                    <li>tässä muutamia esimerkkejä lukemattomista mahdollisuuksista:
+                    
+                        <br>
+                        <br><strong>a { 
+                        <br>&emsp;color: white;
+                        <br>&emsp;background-color: black; 
+                        <br>&emsp;padding: 0.5em 0.6em;
+                        <br>&emsp;border: 2px solid blue;
+                        <br>}
+                        <br><br> a:hover {
+                        <br>&emsp;background-color: white; /* Muuttaa taustavärin */
+                        <br>&emsp;color: black; /* Voidaan muuttaa myös tekstin väriä */
+                        <br>&emsp;box-shadow: 2px 2px 5px gray; /* Lisää varjon */
+                        <br>&emsp;transition: background-color 0.3s ease, color 0.3s ease; /* Lisää sujuvan siirtymän */
+                        <br>&emsp;transform: scale(1.1); /* Suurentaa elementtiä hieman */
+                        <br>&emsp;opacity: 0.8; /* Muuttaa läpinäkyvyyttä */
+                        <br>&emsp;cursor: pointer; /* Muuttaa osoittimen ulkoasun */
+                        <br>&emsp;filter: brightness(0.5); /* Himmentää taustaa */
+                        <br>&emsp;transform: rotate(10deg); /* Kallistaa elementtiä */
+                        <br>&emsp;text-decoration: underline; /* Alleviivaa tekstin */
+                        <br> } </strong>
+                    </li>    
+                </ul>
+
+            </section> 
+            
+            <section>
+                <p class="main_otsikko_teksti"><b>Värilaatikot:</b></p>
+
+                    <p class="main_perus">
+                        - Tässä harjoituksessa keskityttiin CSS:n käyttöön eriväristen (Flat UI) laatikoiden luomiseksi ja asettelemiseksi verkkosivulle. 
+                        <br>
+                        - Värilaatikot luotiin <strong>&lt;div class=""&gt;</strong> -luokilla ja laatikot sijoitettiin vierekkäin käyttämällä <b>float: left;</b> -ominaisuutta.<br> 
+                        - Värilaatikot saivat määritetyn prosenttiarvon leveyttä ja korkeutta.<br>
+                        - Laatikoiden otsikot keskitettiin <strong>text-align: center;</strong>
+                        <br> 
+                        - Flat UI -värit ovat osa minimalistista suunnittelutyyliä, jossa käytetään selkeitä, vahvoja värejä ilman gradientteja tai varjostuksia.
+                        <br>
+                        - Flat UI -värit ovat tehokas työkalu verkkosuunnittelussa, koska ne tarjoavat visuaalista selkeyttä ja houkuttelevuutta.
+                    
+                        <ul>
+                            <li class="ul-main"> Flat UI -värit ovat selkeitä ja puhtaita, mikä helpottaa käyttöliittymän ymmärtämistä ja navigointia
+
+                            <li class="ul-main">Ne antavat sivulle modernin ja ammattimaisen ilmeen
+
+                            <li class="ul-main">Voimakkaat värit tarjoavat hyvän kontrastin, mikä parantaa tekstin luettavuutta ja korostaa tärkeitä elementtejä   
+
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
+            <section>
+                <p class="main_otsikko_teksti"><b>Taulukkoharjoitus:</b></p>
+
+                    <p class="main_perus">
+                    Tässä taulukko-harjoituksessa harjoiteltiin seuraavia keskeisiä asioita: </p>
+                    
+                    <table>
+                        <tr>
+                            <th class="taulukko_otsikko">HTML-taulukon luominen ja rakenne:</th>
+                        </tr>
+                        
+                        <tr>
+                            <th class="taulukko_alaosa">Määritettiin taulukon aloitus ja lopetus <strong>&lt;table&gt;</strong> <strong>&lt;/table&gt;</strong></th> 
+                        </tr>
+
+                        <tr>    
+                            <th class="taulukko_alaosa">Jokainen taulukon rivi aloitetaan ja lopetetaan<strong>&lt;tr&gt;</strong> <strong>&lt;/tr&gt;</strong></th> 
+                        </tr>
+                        
+                        <tr>
+                            <th class="taulukko_alaosa">Otsikkorivin taulukossa määrittelee <strong>&lt;th&gt;</strong> ja yleensä ne sijoitetaan <strong>&lt;tr&gt;</strong> -tagien sisään</th>
+                        </tr>
+                        
+                        <tr>
+                            <th class="taulukko_alaosa">Tietosolun taulukossa määrittelee <strong>&lt;td&gt;</strong> ja jokainen tagi sijoitetaan <strong>&lt;tr&gt;</strong> -tagien sisään </tr>
+                        </tr> 
+                        
+                    </table>
+                    
+                    <table>
+                        <tr>
+                            <th class="taulukko_otsikko">CSS-tyylien käyttö taulukon muotoilussa:</th>
+                        </tr>
+
+                        <tr>
+                            <th class="taulukko_alaosa">Taulukon ulkoasun määrittäminen: leveyden, korkeuden ja reunojen asettaminen <b>(border-collapse, border)</b></tr>
+                        </tr>
+
+                        <tr>
+                            <th class="taulukko_alaosa">Solujen tyylit: tyhjien tilojen <b>(padding)</b>, tekstin koon <b>(font-size)</b>, tekstivarjon <b>(text-shadow)</b> ja kohdistuksen <b>(text-align)</b> asettaminen</tr>
+                        </tr>
+
+                        <tr>
+                            <th class="taulukko_alaosa">Otsikkosolujen ja rivien erikoistyylien asettaminen: tekstityylejä, varjostuksia ja taustavärejä</tr>
+                        </tr>
+
+                    </table>
+
+                    <p class="main_perus">- Alatunnisteen <strong>&lt;footer&gt;</strong> kanssa innostuin kikkailemaan vähän enemmänkin ja tuli harjoiteltua monimutkaisempia tyylejä, kuten reunoja, varjoja, fontteja ja värejä sekä niiden sijoittamista alatunnisteeseen.
+                    <br>
+                    - Kaikkien näiden ominaisuuksien myötä opittiin kuinka HTML-taulukoita voidaan käyttää tietojen järjestämiseen ja kuinka CSS:llä voidaan parantaa taulukoiden visuaalista esitystä ja luettavuutta.</p>
+            </section>
+                     
+    </main>
+    
+    <footer class="footer">
+        <p><span class="footer-text">Ron Gustafsson - All rights reserved &copy; 2024</span></p>
+    
+    </footer>
+    
+</body>
+</html>
