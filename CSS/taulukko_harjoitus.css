@@ -1,0 +1,104 @@
+body {
+    background-color: #ECC5C0;  
+}
+
+table {
+    width: 100%;
+    height: 600px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+th {
+    background-color: #a1cdfc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.peruna {
+    background-color: #ffd700; /* kulta */
+}
+
+.porkkana {
+    background-color: #ff7f50; /* lohenpunainen */
+}
+
+.lanttu {
+    background-color: #cd77c0; /* tumman violetti */
+}
+
+.tilli {
+    background-color: red; /* punainen */
+}
+
+.persilja {
+    background-color: #31c614; /* lime */
+}
+
+tr:last-child {
+    font-weight: bold;
+    background-color: #C2DFFF;
+}
+
+h2 {
+    text-align: center;
+    
+}
+
+h2 span {
+    border: 2px solid black;
+    padding: 10px;
+    font-family: Arial Black;
+}
+
+footer {
+    text-align: center;
+    border: 4px solid #CD7F32;
+    box-shadow: 5px 20px 20px #6b4e23;
+    padding: 25px;
+    
+    font-family: 'Oswald', sans-serif;
+    color: #2C3539; /* Gun Metal */
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #25383C; /* Dark Slate Grey */ 
+
+    text-shadow: 
+    8px 8px 6px #E5E4E2, /* Platinum */
+    -4px -4px 6px #E5E4E2, /* Platinum */
+    12px -12px 6px #FBB917, /* Saffron */
+    -12px 12px 6px #FBB917, /* Saffron */
+    3px 3px 3px rgba(47, 69, 9, 0.995); /* Lisää kontrastia */
+         
+}
+
+p span {
+    border: 10px solid #BCC6CC; /* Metallic Silver */
+    border-radius: 20px; /* Pyöristys */ 
+    box-shadow: 5px 20px 20px hsl(36, 92%, 44%), /* Enemmän varjoa ylöspäin */
+                -5px 0px 20px hsl(36, 100%, 49%), /* Varjoa vasemmalle */
+                5px 0px 20px hsl(36, 66%, 76%); /* Varjoa oikealle */
+    padding: 20px;
+}
+
+.back-button {
+    margin-top: 30px;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Belize Hole väri */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0b28e4; /* Tummempi sininen väri hover-tilassa */
+}

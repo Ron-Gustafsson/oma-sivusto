@@ -1,0 +1,56 @@
+body {
+    background-image: url('../Kuvat/kellotaulu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.valikko {
+    width: 300px; /* Aseta valikon leveys pikseleinä tai prosentteina */
+    padding: 5px; /* Lisää tilaa valikon ympärille */
+    border: 2px solid #00f700; /* Lisää reunus valikkoon */
+    border-radius: 5px; /* Pyöristä reunoja */
+    font-size: 16px; /* Aseta fontin koko */
+    background-color: #ffffff; /* Aseta taustaväri */
+    color: #333; /* Aseta tekstiväri */   
+}
+
+input[type="submit"] {
+    background-color: #2b00ff; /* Vihreä taustaväri */
+    font-size: 20px;
+    color: white; /* Valkoinen tekstiväri */
+    padding: 12px 20px; /* Lisää tilaa napin sisäpuolelle */
+    border: none; /* Poista reunus */
+    border-radius: 4px; /* Pyöristä reunoja */
+    cursor: pointer; /* Osoita, että nappi on napsautettavissa */
+}
+
+input[type="submit"]:hover {
+    background-color: #00ff1a; /* Vaihda taustaväriä, kun nappi on hover-tilassa */
+}
+
+h1 {
+    font-size: 36px; /* Aseta fontin koko */
+    color: rgb(8, 0, 255); /* Aseta tekstiväri */
+    margin-bottom: 20px; /* Lisää väliä alapuolelle */
+}
+
+h2 {
+    font-size: 24px; /* Aseta fontin koko */
+    color: rgb(8, 0, 255); /* Aseta tekstiväri */
+    margin-bottom: 15px; /* Lisää väliä alapuolelle */
+}
+
+.back-button {
+    margin-top: 190px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Belize Hole väri */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0b28e4; /* Tummempi sininen väri hover-tilassa */
+}

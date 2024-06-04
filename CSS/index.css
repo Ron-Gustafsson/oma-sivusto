@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box; /* Huomioi reunat ja täytöt elementin leveydessä ja korkeudessa */
+    font-family: 'oswald', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #25383C; /* Dark Slate Gray*/
+}
+
+header {
+    background-color: #25383C; /* Dark Slate Gray*/
+    border: 4px solid #0C090A; /* Night */
+    padding: 10px 0; /* Vähennä padding-arvoja pienentääksesi headeria */
+    height: 250px;
+    
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;  /* Keskittää tekstin */
+    justify-content: center;
+    min-height: 180px; /* Säädä tätä jos tarvitset enemmän tai vähemmän tilaa headeriin */
+    
+}
+
+.otsikko {
+    font-size: 56px;
+    color: #D1D0CE;
+    font-weight: bold;
+    margin-top: -80px;
+    text-shadow: 
+        1px 1.5px 1px #CD7F32,
+        -1px -1px 2px #E5E4E2,
+        5px 5px 5px #BCC6CC;
+}
+
+p.info {
+    font-size: 26px;
+    color: #25383C; /* Vaihdettu väri, jotta se erottuu paremmin taustasta Dark Slate Gray*/
+    font-weight: bold;
+    margin: 0 0 10px 0; /* Lisää marginaalit */
+    padding-left: 20px;
+    text-align: left;
+    text-shadow: 
+        2px 4px 4px #E5E4E2,
+        -1px -1px 2px #E5E4E2,
+        5px 5px 5px rgba(214, 192, 174, 0.763);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .otsikko {
+        font-size: 40px;
+    }
+
+    p.info {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .otsikko {
+        font-size: 30px;
+    }
+
+    p.info {
+        font-size: 18px;
+    }
+}
+
+nav {
+    background-color: #BCC6CC; /* Metallic Silver */
+    text-align: center;
+    
+    border-right: 4px solid #0C090A; /* Night */
+    border-left: 4px solid #0C090A; /* Night */
+    border-bottom: 8px solid #25383C; /* Dark Slate Grey */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.nav_otsikko {
+    font-size: 32px;
+    font-weight: bold;
+    color: #25383C; /* Dark Slate Grey */
+
+    text-shadow: 
+    1px 2px 1px #070500, /* Platinum */
+    -1px -1px 20px #010000, /* Platinum */
+    
+    5px 5px 5px #436268; /* Kontrastia */
+}
+
+nav a:hover {
+    color: #FFF5EE; /* Vaihda tekstiväri Sea Shell */
+    background-color: #25383C; /* Vaihda taustaväri Dark Slate Grey */
+    transition: color 1.3s ease, background-color 0.65s ease; /* Lisätään siirtymäefekti värien muutokselle */
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.ul-linkit {
+    display: flex;
+    flex-wrap: wrap; /* Jotta linkit siirtyvät uudelle riville tarvittaessa */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+.linkit {
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    border: 2px solid #25383C; /* Dark Slate Grey */
+    border-radius: 10px;
+    background-color: #c3d7e7; /* Azure */
+    padding: 8px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.571); /* Vaalea varjo, joka sopii Dark Slate Grey -väriin */
+}
+
+.linkit:hover {
+    transform: translateY(-3px); /* Nostetaan hieman ylöspäin */
+    box-shadow: 0px 0px 20px 5px rgb(23, 15, 9); /* Lisätään varjo joka suuntaan */
+    
+}
+
+.linkit a {
+    color: #25383C; /* Linkkien väri Dark Slate Grey */
+    text-decoration: none; /* Poistaa alleviivauksen */
+}
+
+
+main {
+    border-right: 4px solid #25383C;
+    border-left: 4px solid #25383C;
+    border-bottom: 8px solid #25383C; /* Dark Slate Grey */
+    padding-top: 10px;
+    padding-bottom: 10px; /* Lisää tilaa alas */
+    width: 100%;
+    height: auto; /* Mukauta korkeus sisällön mukaan */
+    background-color: #ecf0f1; /* Clouds FLAT UI taustaväri */
+    
+}
+
+.main_container {
+    width: 80%; /* Voit säätää leveyttä tarpeen mukaan */
+    margin: 0 auto; /* Keskittää sisällön vaakasuunnassa */
+    padding: 20px; /* Lisää tilaa ympärille */
+}
+
+.main_perus  {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 2;
+    text-shadow: 0.5px 1px 0.5px rgb(163, 92, 92);
+    padding-left: 10px;
+}
+
+.main_otsikko_teksti {
+    font-size: 24px;
+    text-shadow: 1px 1px 1px hsla(219, 61%, 48%, 0.934);
+}
+
+.ul-main  {
+    font-size: 18px;
+    list-style-type: square;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 1px rgb(255, 115, 0);
+}
+
+.lista_hover {  /* Määrittää sisennetyn listan ulkoasun ja sijoituksen*/
+    margin-left: 30px;
+    font-size: 18px;
+    color: #2980b9; /* Belize Hole */
+    list-style-type:none;   /* Poistaa oletusarvoisen listan tyylin (list-style-type: none) */
+}
+
+.lista_hover li {      /* Määrittää yksittäisten listan osien ulkoasun ja sijoituksen: */
+    position: relative;
+    padding-left: 1.5em; /* Jätetään tilaa ympyrälle */
+    margin-bottom: 0.5em; /* Vähän tilaa kohteiden väliin */
+}
+
+.lista_hover li::before {       /* Määrittää listan osan edessä olevan ympyrän ulkoasun: */
+    content: '';                /* Sisällön tyhjäksi (content: '') */
+    position: absolute;         /* Absoluuttinen positio (position: absolute) */ 
+    left: 0;                    /* Asettaa ympyrän vasemman reunan (left) */
+    top: 0.5em;                 /* Säätää ympyrän vertikaalista sijaintia */
+            
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%; /* Tekee ympyrän */
+    background-color: rgb(14, 0, 171); /* Pallukan väri */
+}
+
+table {
+    margin-left: 20px;
+    width: 45%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.taulukko_otsikko {
+    text-align: center;
+    border: 3px solid black;
+    font-size: 24px;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+.taulukko_alaosa {
+    text-align: center;
+    border: 3px solid black;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+/* Footerin ulkoasu */
+.footer {
+    text-align: center;
+    border: 4px solid #CD7F32; /* Ruskean sävy */
+    
+
+    /* Footerin sijoittelu sivulla */
+    position: relative; /* Sivun alareunaan nähden */
+    width: 100%; 
+    font-family: 'Oswald', sans-serif;
+    color: #FFF5EE; /* Sea Shell väri */
+    font-size: 36px;
+    font-weight: bold;
+    
+
+    /* Tekstille varjo */
+    text-shadow: 
+    4px 4px 10px rgba(0, 0, 0, 0.758), /* Musta */
+    -4px -4px 10px rgba(255, 255, 255, 0.76), /* Valkoinen */
+    8px -8px 12px rgba(255, 217, 0, 0.895), /* Kulta */
+    -8px 8px 12px rgba(255, 166, 0, 0.879), /* Oranssi */
+    0px 0px 10px rgba(0, 0, 0, 0.6); /* Musta */
+}
+
+/* Teksti footerissa */
+.footer-text {
+    border: 8px solid #BCC6CC; /* Hopeinen sävy */
+    border-radius: 20px; /* Pyöristys */
+    box-shadow: 
+        0px 0px 30px 15px rgb(232, 229, 227), /* Vaalea varjo ympärille */
+        10px 10px 40px rgba(255, 165, 0, 0.9), /* Oranssi varjo oikealle ja alaspäin */
+        -10px -10px 40px rgb(166, 81, 7), /* Oranssi varjo vasemmalle ja ylöspäin */
+        0px 20px 30px rgba(234, 101, 6, 0.998), /* Alapuolen varjo */
+        0px -20px 30px rgba(112, 50, 3, 0.963); /* Yläpuolen varjo */
+    
+    padding: 5px;
+}

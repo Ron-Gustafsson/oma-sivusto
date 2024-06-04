@@ -1,0 +1,45 @@
+header {
+    color: #2C3E50; /* Midnight blue Flat väri*/
+    text-align: center;
+}
+
+body {
+    font-family: calibri, sans-serif;
+    background-color: #4FC2E5; /* Aqua Flat väri*/
+}
+
+.pannukakku_kuva {
+    float: right;
+    width: 415px;
+    height: auto;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+h2 {
+    color: #6A50A7; /* Plum Flat väri*/
+}
+
+.same-line {
+    white-space: nowrap; /* Tätä piti käyttää tuossa kohdassa*/
+}
+
+footer {
+    font-style: italic;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Belize Hole väri */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0b28e4; /* Tummempi sininen väri hover-tilassa */
+}

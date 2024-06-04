@@ -1,0 +1,87 @@
+body {
+    border: 4px solid blue;
+    background-color: #F0FFFF; /* Azure väri */
+}
+
+header {
+    font-size: 36px;
+    color: blue;
+    text-align: center;
+    background-color: #BCC6CC; /* Metallic Silver väri */ 
+    padding: 5px;
+    border-bottom: 4px solid blue;
+}
+
+nav {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block; /* Tehdään ankkurit lohkoelementeiksi, jotta niiden väliin voi lisätä tilaa */
+    margin-right: 10px; /* Lisätään tilaa linkkien väliin */
+}
+
+table {
+    padding-top: 50px;
+    margin: 0 auto; 
+}
+
+.parkkipaikka {
+    font-size: 20px;
+    width: 300px;
+    height: 150px;
+    margin: 5px;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.back-button {
+    margin-top: 20px;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Belize Hole väri */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0b28e4; /* Tummempi sininen väri hover-tilassa */
+}
+
+
+
+footer {
+    margin-top: 100px;
+    padding: 8px;
+    border-top: 4px solid blue;
+    background-color: #F0F8FF;
+    text-align: center;
+}
+
+.rakensi {
+    font-family: Arial, sans-serif;
+    color: blue;
+    font-size: 20px;
+}
+
+.Ron {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; 
+    color:#837E7C; /* Granite väri */
+    font-weight: bolder;
+}
+footer p {
+    margin: 0; /* Nollaa tekstirivin marginaalin */
+    padding: 0px; /* Säädä tekstirivin sisennystä tarvittaessa */
+}
