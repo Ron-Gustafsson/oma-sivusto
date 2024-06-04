@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../CSS/ajanvarauslomake.css">
+    <title>Ajanvarauslomake</title>
+
+  </head>
+
+  <body>
+    <h1>Ajanvarauslomake</h1>
+    <h2>Tervetuloa varaamaan aika</h2>
+    <form>
+        <label for="email"><b>Sähköposti:</b></label><br>
+        <input type="email" class="valikko" id="email" name="email" placeholder="mikko.mallikas@palveluntarjoaja.com" required> <br><br>
+
+        <label for="time"><b>Valitse aihe:</b></label><br>
+        <select id="time" name="time" class="valikko" required>
+            <option value="" disabled selected hidden>Valitse aihe</option>
+            <option value="Hampaan paikkaus">Hampaan paikkaus</option>
+            <option value="Hampaan poisto">Hampaan poisto</option>
+            <option value="Hampaiden tarkistus">Hampaiden tarkistus</option>
+        </select><br><br>
+
+        <label for="place"><b>Valitse paikka:</b></label><br>
+        <select id="place" name="place" class="valikko" required>
+            <option value="" disabled selected hidden>Valitse paikka</option>
+            <option value="Paikka 1">Paikka 1</option>
+            <option value="Paikka 2">Paikka 2</option>
+            <option value="Paikka 3">Paikka 3</option>
+        </select><br><br>
+        
+        <label for="date"><b>Valitse päivä:</b></label><br>
+        <input type="date" id="date" name="date" class="valikko" required><br><br>
+
+        <label><b>Valitse aika:</b></label><br>
+            <label><input type="radio" name="time" value="12:00" required>12:00</label><br>
+            <label><input type="radio" name="time" value="12:45" required>12:45</label><br>
+            <label><input type="radio" name="time" value="13:30" required>13:30</label><br>
+            <label><input type="radio" name="time" value="14:30" required>14:30</label><br><br>
+
+        <input type="submit" value="Lähetä">
+      </form> 
+
+      <a href="../index.html" class="back-button">Palaa etusivulle</a>
+  </body>
+</html>
