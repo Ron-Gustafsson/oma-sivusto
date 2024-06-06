@@ -1,0 +1,11 @@
+.row div {
+    border: 2px solid rgb(70, 51, 51);
+}
+
+.modal-dialog {
+    transform: translateX(10%);
+}
+
+body {
+    background-color: #ecf0f1; /* Clouds FLAT UI taustaväri */
+}
