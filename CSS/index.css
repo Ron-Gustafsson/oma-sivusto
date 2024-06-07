@@ -158,9 +158,9 @@ main {
 }
 
 .main_perus  {
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
-    line-height: 2;
+    line-height: 1.5;
     text-shadow: 0.5px 1px 0.5px rgb(163, 92, 92);
     padding-left: 10px;
 }
@@ -222,6 +222,80 @@ table {
     font-size: 20px;
     font-weight: 400;
     text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+/* Bootstrap tehtävän järjestetty lista tyyli */
+ol {
+    list-style-type: decimal;
+    font-size: 1.2em; /* Suurentaa fonttikokoa */
+    font-weight: bold; /* Tekee numerot lihavoiduksi */
+}
+ol li::marker {
+    color: #25383C; /* Muuttaa numerot Dark Slate Grey */
+}
+
+.bootstrap {
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+}
+
+.bootstrap {
+    position: relative;
+    padding-left: 20px; /* Tilaa luettelomerkin ja tekstin väliin */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.bootstrap::before {
+    content: "•"; /* Luettelomerkki */
+    position: absolute;
+    left: 0;
+    color: #007bff; /* Sininen väri */
+    font-size: 1.6em; /* Suurempi luettelomerkki */
+    line-height: 1; /* Korjaa linjakorkeuden */
+}
+
+/* Allekirjoitus */
+.greeting {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    color: #2c3e50;
+    margin-top: 40px;
+}
+
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    color: #2c3e50;
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px #bdc3c7;
+}
+
+/* Takaisin sivun alkuun nappula */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #646464;
 }
 
 /* Footerin ulkoasu */

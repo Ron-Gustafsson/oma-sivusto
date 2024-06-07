@@ -203,6 +203,24 @@
 
     <form>
         <!-- Kommentti: Lomakkeen aloitustagi. -->
+        
+        <div class="form-group row">
+            <!-- Kommentti: form-group-luokka yhdistää lomakkeen kentät ryhmiin.
+                 row-luokka luo rivin, johon sarakkeet asetetaan. -->
+
+            <label class="col-sm-3 col-form-label" for="email">Forms exercise:</label>
+            <!-- Kommentti: col-sm-3-luokka asettaa label-elementin kolmen kahdestatoista osan levyiseksi sarakkeeksi pienissä ja sitä suuremmissa näytöissä.
+                 col-form-label-luokka parantaa label-elementin ulkoasua Bootstrapin lomakkeissa.
+                 for-attribuutti yhdistää labelin input-elementtiin id:n avulla. -->
+
+            <div class="col-sm-9">
+                <!-- Kommentti: col-sm-9-luokka asettaa input-elementin yhdeksän kahdestatoista osan levyiseksi sarakkeeksi pienissä ja sitä suuremmissa näytöissä. -->
+
+                <input type="text" class="form-control" id="email">
+                <!-- Kommentti: form-control-luokka parantaa input-elementin ulkoasua Bootstrapin avulla.
+                     id-attribuutti tunnistaa elementin yksilöllisesti. -->
+            </div>
+        </div>
 
         <div class="form-group row">
             <!-- Kommentti: form-group-luokka yhdistää lomakkeen kentät ryhmiin.
@@ -244,7 +262,7 @@
 </div>
  <!-- Forms harjoitus päättyy -->
 
-  <!-- List Groups harjoitus päättyy -->
+  <!-- List Groups harjoitus alkaa -->
   <div class="container" style="margin-top:30px">
     <!-- Container-luokka keskittää sisällön ja style-attribuutti lisää 30 pikselin yläreunan marginaalin -->
 
@@ -255,7 +273,32 @@
             <!-- List-group-item-luokka määrittää tämän listan osaksi.
                  List-group-item-action-luokka mahdollistaa kohteen klikkaamisen tai aktivoimisen -->
 
+            List Group exercise
+            <!-- Linkin teksti -->
+        </a>
+    
+    <div class="list-group">
+        <!-- List-group-luokka luo Bootstrapin tyylin mukaisen listaelementin -->
+
+        <a href="#" class="list-group-item list-group-item-action">
+            <!-- List-group-item-luokka määrittää tämän listan osaksi.
+                 List-group-item-action-luokka mahdollistaa kohteen klikkaamisen tai aktivoimisen -->
+
             Homepage
+            <!-- Linkin teksti -->
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action">
+            <!-- Sama kuin edellä: list-group-item ja list-group-item-action-luokat määrittävät listan kohteen ja sen klikkauskelpoisuuden -->
+
+            Blog
+            <!-- Linkin teksti -->
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action">
+            <!-- Sama kuin edellä: list-group-item ja list-group-item-action-luokat -->
+
+            Contact
             <!-- Linkin teksti -->
         </a>
 
@@ -272,20 +315,6 @@
             <!-- Badge-luokka luo pienen merkinnän tai tunnisteen.
                  Badge-primary-luokka käyttää ensisijaista Bootstrapin väriteemaa.
                  Badge-pill-luokka tekee merkinnästä pyöreän. -->
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-            <!-- Sama kuin edellä: list-group-item ja list-group-item-action-luokat määrittävät listan kohteen ja sen klikkauskelpoisuuden -->
-
-            Blog
-            <!-- Linkin teksti -->
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-            <!-- Sama kuin edellä: list-group-item ja list-group-item-action-luokat -->
-
-            Contact
-            <!-- Linkin teksti -->
         </a>
     </div>
     <!-- list-group-div-elementin sulkeminen -->
