@@ -142,11 +142,18 @@ footer {
         /* Pienennetty osioiden sisäpaddingia mobiililaitteille */
     }
 
+    /* Pienennetään canvas-elementtiä mobiililaitteille */
     canvas {
-        margin-top: 20px;
-        /* Pienennetty canvasin ylämarginaalia mobiililaitteille */
-        margin-bottom: 20px;
-        /* Pienennetty canvasin alamarginaalia mobiililaitteille */
+        width: 100%;
+        /* Täysi leveys mobiililaitteilla */
+        height: auto;
+        /* Automaattinen korkeus, säilyttää kuvasuhteen */
+        max-width: 100%;
+        /* Maksimileveys täysin responsiiviselle skaalaukselle */
+        margin-top: 10px;
+        /* Pienennetään ylämarginaalia */
+        margin-bottom: 10px;
+        /* Pienennetään alamarginaalia */
     }
 }
 
