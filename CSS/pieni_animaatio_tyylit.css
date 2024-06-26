@@ -177,6 +177,24 @@ code {
 #home p {
     font-style: italic;
     font-weight: bold;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#home a {
+    color: #0077cc;
+    /* Valitse haluamasi linkkiväri */
+    text-decoration: none;
+    border-bottom: 1.5px solid #0077cc;
+    /* Lisää alaviiva linkin alle */
+    transition: border-bottom-color 0.3s ease;
+    /* Lisää siirtymäefekti */
+}
+
+#home a:hover {
+    border-bottom-color: #000000;
+    /* Alaviivan väri hover-tilassa */
 }
 
 #about {
