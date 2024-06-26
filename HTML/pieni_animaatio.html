@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pieni animaatio</title>
+    <link rel="stylesheet" href="pieni_animaatio_tyylit.css"> <!-- Liitä ulkoinen CSS-tiedosto -->
+</head>
+<body>
+    <header>
+        <h1>Pieni animaatio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Tehty HTML, CSS & JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <canvas id="canvaasi" width="800" height="700">
+        </canvas>
+
+        <section id="home">
+            <h2>Tervetuloa uuden projektini pariin, jossa harjoitellaan animaation luomista.</h2>
+            <br>
+            <p>- Ensimmäiseksi luodaan HTML-sivu (<a href="pieni_animaatio.html">pieni_animaatio.html</a>), jossa voit nähdä tämän
+                animaation Canvas-elementin sisällä.</p>
+            <p>- Sen jälkeen määritellään sivuston ulkoasu CSS-tiedostolla (<a
+                    href="pieni_animaatio_tyylit.css">pieni_animaatio_tyylit.css</a>).</p>
+            <p>- Lopuksi luodaan animaation logiikka JavaScript-tiedostolla (<a href="pieni_animaatio.js">pieni_animaatio.js</a>).
+            </p>
+        </section>
+        
+        <section id="about">
+            <h2>Tietoa</h2>
+            <h3>Tässä osiossa kerrotaan projektista tarkemmin.</h3>
+            <h4>Animaation Luominen</h4>
+            <p>Animaatio on luotu käyttämällä HTML5-canvas-elementtiä ja JavaScriptiä. Tässä on lyhyt kuvaus animaation
+                luomisprosessista:</p>
+        
+            <ol>
+                <li>
+                    <strong>HTML-koodin lisääminen:</strong> Lisää HTML-sivulle <code>&lt;canvas&gt;</code>-elementti, johon
+                    animaatio piirretään.
+                </li>
+                <li>
+                    <strong>JavaScript-koodin lisääminen:</strong> Lisää JavaScript-koodi, joka sisältää animaation logiikan.
+                </li>
+                <li>
+                    <strong>Canvas-elementin valinta:</strong> Valitse canvas-elementti JavaScriptissä käyttämällä
+                    <code>document.getElementById</code>-funktiota.
+                </li>
+                <li>
+                    <strong>Piirtoalueen kontekstin hakeminen:</strong> Hae canvasin piirtoalueen konteksti
+                    <code>getContext('2d')</code>-funktiolla.
+                </li>
+                <li>
+                    <strong>Piirtofunktioiden määrittäminen:</strong> Määritellään funktiot eri elementtien piirtämiseksi:
+                    <ul>
+                        <li><strong>Niitty:</strong> Luodaan funktio <code>drawNiitty</code>, joka odottaa tarkempia määrityksiä
+                            niitylle.</li>
+                        <li><strong>Vuoret:</strong> Luodaan funktio <code>drawMountains</code>, joka odottaa tarkempia määrityksiä
+                            vuorille.</li>
+                        <li><strong>Aurinko:</strong> Luodaan funktio <code>drawSun</code>, joka odottaa tarkempia määrityksiä
+                            auringolle.</li>
+                        <li><strong>Pilvet:</strong> Luodaan funktio <code>drawClouds</code>, joka odottaa tarkempia määrityksiä
+                            pilville.</li>
+                        <li><strong>Mörrimöykky:</strong> Luodaan funktio <code>drawMörrimöykky</code>, joka odottaa tarkempia
+                            määrityksiä möykyistä mörrimmälle.</li>
+                    </ul>
+                </li>
+                    <strong>Elementtien Piirtäminen:</strong> Elementtien piirtäminen canvasille JavaScriptillä:
+                    <ul>
+                        <li><strong>Niitty:</strong> Piirretään vihreä suorakulmio canvasin alareunaan, joka edustaa niittyä. Niitty sijoittuu canvasin alareunaan ja sen
+                        väri on vihreä.</li>
+                        <li><strong>Vuoret:</strong> Piirretään harmaat kolmiomaiset vuoret, jotka sijaitsevat canvasin keskiosassa. Vuoret piirretään kolmiona, jonka huiput
+                        osoittavat ylöspäin.</li>
+                        <li><strong>Aurinko:</strong> Piirretään keltainen ympyrä canvasin keskelle, joka liikkuu ylös ja alas luoden auringon nousun ja laskun vaikutelman.
+                        Aurinko liikkuu pystysuunnassa.</li>
+                        <li><strong>Pilvet:</strong> Piirretään valkoisia pilviä bezier-käyrien avulla, jotka liikkuvat vaakasuunnassa oikealta vasemmalle. Pilvet ilmestyvät
+                        uudelleen canvasin vasemmasta laidasta.</li>
+                        <li><strong>Mörrimöykky:</strong> Piirretään ruskea olento, jolla on pää, silmät, nenä, kieli, korvat, vartalo, kädet ja jalat. Mörrimöykky liikkuu ylös,
+                        alas, vasemmalle ja oikealle canvasin alueella.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Elementtien sijaintien määrittäminen:</strong> Määritä elementtien aloitussijainnit ja nopeudet
+                    liikkumista varten.
+                </li>
+                <li>
+                    <strong>Animaation käynnistäminen:</strong> Luo <code>animate</code>-funktio, joka päivittää elementtien
+                    sijainnit ja piirtää ne uudelleen.
+                </li>
+                <li>
+                    <strong>Animaation silmukka:</strong> Käytä <code>requestAnimationFrame</code>-funktiota, joka pyytää
+                    selainta
+                    suorittamaan animaation seuraavan päivityksen.
+                </li>
+                <li>
+                    <strong>Animaation käynnistäminen:</strong> Kutsu <code>animate</code>-funktiota ensimmäistä kertaa, jotta
+                    animaatio käynnistyy.
+                </li>
+            </ol>
+        
+            <p>Animaatio luodaan määrittelemällä HTML-sivulle piirtoalue (canvas), piirtämällä siihen eri elementit
+                JavaScriptillä
+                ja päivittämällä näiden elementtien sijainteja jatkuvasti. Näin saadaan aikaan liikkuva ja elävä animaatio.</p>
+        </section>
+        
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Pieni animaatio - Ron Gustafsson</p>
+        </footer>
+        
+        <script src="pieni_animaatio.js"></script> <!-- Linkitä ulkoinen JavaScript-tiedosto -->
+        </body>
+        
+        </html>
