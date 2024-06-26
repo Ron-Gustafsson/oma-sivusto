@@ -19,34 +19,22 @@ canvas {
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: transparent;
-    /* Läpinäkyvä tausta, jotta animaation värit pysyvät */
     border: solid 15px #25383C;
-    /* Tumma liuskekivi */
     border-radius: 15px;
     box-shadow:
         0 -10px 40px 20px rgba(130, 202, 255, 0.8),
-        /* Sininen hehku ylhäällä */
         0 -20px 80px 40px rgba(130, 202, 255, 0.6),
-        /* Sininen hehku ylhäällä */
         0 -30px 120px 60px rgba(130, 202, 255, 0.4),
-        /* Sininen hehku ylhäällä */
         0 -40px 160px 80px rgba(130, 202, 255, 0.2),
-        /* Sininen hehku ylhäällä */
         0 20px 40px 20px rgba(67, 124, 23, 0.8),
-        /* Vihreä hehku alhaalla */
         0 40px 80px 40px rgba(67, 124, 23, 0.6),
-        /* Vihreä hehku alhaalla */
         0 60px 120px 60px rgba(67, 124, 23, 0.4),
-        /* Vihreä hehku alhaalla */
         0 80px 160px 80px rgba(67, 124, 23, 0.2);
-        /* Vihreä hehku alhaalla */
     transition: transform 0.3s ease;
-        /* Siirtymäefekti */
-}   
+}
 
 canvas:hover {
     transform: scale(1.05);
-    /* Suurentaa canvas-elementtiä hover-tilassa */
 }
 
 /* Linkit */
@@ -75,10 +63,11 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 10px;
 }
 
@@ -100,16 +89,19 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    flex: 1; /* Ottaa jäljellä olevan tilan */
-    background: #98AFC7; /* Blue Gray*/
+    background: #98AFC7;
 }
 
 main section {
     margin-bottom: 20px;
-    max-width: 800px;
+    padding: 20px;
+    background-color: #CFECEC;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
+    /* Täysin leveys kaikilla näyttökoilla */
+    max-width: 800px;
+    /* Maksimileveys, jotta sisältö ei veny liikaa suuremmilla näytöillä */
 }
 
 main h2 {
@@ -122,12 +114,16 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    bottom: 0;
     width: 100%;
 }
 
 /* Mediatiedustelut responsiivisuutta varten */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+        /* Pienennetty otsikon fonttikokoa mobiililaitteille */
+    }
+
     nav ul li {
         display: block;
         margin-bottom: 10px;
@@ -135,26 +131,38 @@ footer {
 
     nav ul li a {
         display: block;
+        font-size: 16px;
+        /* Pienennetty linkkien fonttikokoa mobiililaitteille */
+        padding: 8px 12px;
+        /* Pienennetty paddingia mobiililaitteille */
+    }
+
+    main section {
+        padding: 15px;
+        /* Pienennetty osioiden sisäpaddingia mobiililaitteille */
+    }
+
+    canvas {
+        margin-top: 20px;
+        /* Pienennetty canvasin ylämarginaalia mobiililaitteille */
+        margin-bottom: 20px;
+        /* Pienennetty canvasin alamarginaalia mobiililaitteille */
     }
 }
+
 /* code erottaa tekstin paremmin vaaleasta pohjasta */
 code {
     background-color: #f0f0f0;
-    /* Light gray background */
     padding: 2px 4px;
-    /* Padding around the code */
     border-radius: 4px;
-    /* Rounded corners */
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    /* Monospace font */
     font-size: 0.9em;
-    /* Adjust font size */
 }
 
 #home {
     margin-top: 20px;
     padding: 20px;
-    background-color: #CFECEC; /* Pale Blue Lily */
+    background-color: #CFECEC;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -167,7 +175,7 @@ code {
 #about {
     margin-top: 20px;
     padding: 20px;
-    background-color: #E5E4E2; /* Platinum */
+    background-color: #E5E4E2;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
