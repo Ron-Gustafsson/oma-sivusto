@@ -1,2 +1,0 @@
-# oma-sivusto
-Sisältää harjoitustehtäviä
