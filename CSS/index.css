@@ -68,7 +68,7 @@ p.info {
     }
 
     .nav_otsikko {
-    font-size: 36px;
+    font-size: 30px;
     /* Pienennetty fonttikokoa mobiilikäyttöön */
     text-align: center;
     }
@@ -93,7 +93,7 @@ p.info {
     }
 
     .nav_otsikko {
-    font-size: 36px;
+    font-size: 26px;
     /* Entisestään pienennetty fonttikokoa pienimmille näytöille */
     text-align: center;
     }
