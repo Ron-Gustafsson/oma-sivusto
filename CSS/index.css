@@ -85,13 +85,13 @@ p.info {
     }
 
     .footer {
-    font-size: 24px;
+    font-size: 26px;
     padding: 8px 0;
     margin-bottom: 20px; /* Lisää marginaali alareunaan */
     }
     
     .footer-text {
-    font-size: 20px;
+    font-size: 22px;
     border-width: 4px;
     margin-bottom: 20px; /* Lisää marginaali alareunaan */
     transform: translateY(-20px); /* Nosta tekstiä ylöspäin */
@@ -138,13 +138,13 @@ p.info {
     }
 
     .footer {
-    font-size: 18px;
+    font-size: 20px;
     padding: 6px 0;
     margin-bottom: 20px; /* Lisää marginaali alareunaan */
     }
     
     .footer-text {
-    font-size: 16px;
+    font-size: 18px;
     border-width: 2px;
     margin-bottom: 20px; /* Lisää marginaali alareunaan */
     transform: translateY(-20px); /* Nosta tekstiä ylöspäin */
