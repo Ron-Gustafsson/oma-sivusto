@@ -267,3 +267,25 @@ code {
     background-color: #0b28e4;
     /* Tummempi sininen väri hover-tilassa */
 }
+
+/* Takaisin sivun alkuun nappula */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #646464;
+}
