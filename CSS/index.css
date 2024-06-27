@@ -87,14 +87,14 @@ p.info {
     .footer {
     font-size: 26px;
     padding: 8px 0;
-    margin-bottom: 20px; /* Lisää marginaali alareunaan */
+    margin-bottom: -20px;
+        /* tai kokeile eri negatiivisia arvoja */
     }
     
     .footer-text {
     font-size: 22px;
     border-width: 4px;
-    margin-bottom: 20px; /* Lisää marginaali alareunaan */
-    transform: translateY(-20px); /* Nosta tekstiä ylöspäin */
+    transform: translateY(-30px); /* Nosta tekstiä ylöspäin */
     box-shadow:
     0px 0px 20px 10px rgb(232, 229, 227),
     /* Vaalea varjo ympärille */
@@ -140,14 +140,14 @@ p.info {
     .footer {
     font-size: 20px;
     padding: 6px 0;
-    margin-bottom: 20px; /* Lisää marginaali alareunaan */
+    margin-bottom: -20px;
+        /* tai kokeile eri negatiivisia arvoja */
     }
     
     .footer-text {
     font-size: 18px;
     border-width: 2px;
-    margin-bottom: 20px; /* Lisää marginaali alareunaan */
-    transform: translateY(-20px); /* Nosta tekstiä ylöspäin */
+    transform: translateY(-30px); /* Nosta tekstiä ylöspäin */
     box-shadow:
         0px 0px 15px 5px rgb(232, 229, 227),
         /* Vaalea varjo ympärille */
