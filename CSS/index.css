@@ -30,7 +30,7 @@ header {
 }
 
 .otsikko {
-    font-size: 56px;
+    font-size: 60px;
     color: #D1D0CE;
     font-weight: bold;
     margin-top: 10px;
@@ -42,7 +42,7 @@ header {
 }
 
 p.info {
-    font-size: 26px;
+    font-size: 32px;
     color: #25383C; /* Vaihdettu väri, jotta se erottuu paremmin taustasta Dark Slate Gray*/
     font-weight: bold;
     margin: 0 0 10px 0; /* Lisää marginaalit */
@@ -107,7 +107,7 @@ nav {
 }
 
 .nav_otsikko {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: bold;
     color: #25383C; /* Dark Slate Grey */
 
