@@ -56,6 +56,7 @@ p.info {
 @media (max-width: 768px) {
     .otsikko {
         font-size: 48px;
+        margin-top: 20px;
     }
 
     p.info {
@@ -68,16 +69,18 @@ p.info {
     }
 
     .nav_otsikko {
-    font-size: 30px;
+    font-size: 24px;
     /* Pienennetty fonttikokoa mobiilikäyttöön */
     text-align: center;
     }
 
     .main_container {
     width: 95%;
-    /* Leventää mainia mobiilissa */
-    padding: 10px;
-    /* Pienentää sisätilaa */
+    padding: 15px; /* Pienennetty sisätilaa ja lisätty hieman tilaa elementin ympärille */
+    margin: 0 auto;
+    /* Keskitetty elementti */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Lisätty kevyt varjo elementin ympärille */
     }
 }
 
@@ -93,16 +96,19 @@ p.info {
     }
 
     .nav_otsikko {
-    font-size: 26px;
+    font-size: 20px;
     /* Entisestään pienennetty fonttikokoa pienimmille näytöille */
     text-align: center;
     }
 
     .main_container {
     width: 95%;
-    /* Leventää mainia mobiilissa */
-    padding: 10px;
-    /* Pienentää sisätilaa */
+    padding: 15px;
+    /* Pienennetty sisätilaa ja lisätty hieman tilaa elementin ympärille */
+    margin: 0 auto;
+    /* Keskitetty elementti */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Lisätty kevyt varjo elementin ympärille */
     }
 }
 
