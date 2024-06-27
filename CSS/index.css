@@ -71,7 +71,8 @@ p.info {
     .nav_otsikko {
     font-size: 20px;
     /* Pienennetty fonttikokoa mobiilikäyttöön */
-    text-align: center;
+    margin-top: 10px;
+        /* Varmista tarvittaessa hieman lisää tilaa yläreunassa */
     }
 
     .main_container {
@@ -98,7 +99,8 @@ p.info {
     .nav_otsikko {
     font-size: 18px;
     /* Entisestään pienennetty fonttikokoa pienimmille näytöille */
-    text-align: center;
+    margin-top: 10px;
+        /* Varmista tarvittaessa hieman lisää tilaa yläreunassa */
     }
 
     .main_container {
@@ -129,12 +131,12 @@ nav {
     font-size: 40px;
     font-weight: bold;
     color: #25383C; /* Dark Slate Grey */
-
     text-shadow: 
     1px 2px 1px #070500, /* Platinum */
     -1px -1px 20px #010000, /* Platinum */
     
     5px 5px 5px #436268; /* Kontrastia */
+    white-space: normal; /* Varmistaa, että teksti menee allekkain tarvittaessa */
 }
 
 nav a:hover {
