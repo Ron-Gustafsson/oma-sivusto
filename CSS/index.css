@@ -69,7 +69,7 @@ p.info {
     }
 
     .nav_otsikko {
-    font-size: 24px;
+    font-size: 20px;
     /* Pienennetty fonttikokoa mobiilikäyttöön */
     text-align: center;
     }
@@ -96,7 +96,7 @@ p.info {
     }
 
     .nav_otsikko {
-    font-size: 20px;
+    font-size: 18px;
     /* Entisestään pienennetty fonttikokoa pienimmille näytöille */
     text-align: center;
     }
@@ -140,7 +140,7 @@ nav {
 nav a:hover {
     color: #FFF5EE; /* Vaihda tekstiväri Sea Shell */
     background-color: #25383C; /* Vaihda taustaväri Dark Slate Grey */
-    transition: color 1.3s ease, background-color 0.65s ease; /* Lisätään siirtymäefekti värien muutokselle */
+    transition: color 0.6s ease, background-color 0.35s ease; /* Lisätään siirtymäefekti värien muutokselle */
     border-radius: 8px;
     padding: 3px;
 }
@@ -193,7 +193,7 @@ main {
 }
 
 .main_container {
-    width: 80%; /* Voit säätää leveyttä tarpeen mukaan */
+    width: 90%; /* Voit säätää leveyttä tarpeen mukaan */
     margin: 0 auto; /* Keskittää sisällön vaakasuunnassa */
     padding: 20px; /* Lisää tilaa ympärille */
     /* Lisää reunoille varjo */
