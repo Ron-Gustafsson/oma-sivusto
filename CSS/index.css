@@ -68,6 +68,11 @@ p.info {
         /* Poista vasen täyttö paremman tasauksen saavuttamiseksi */
         margin-bottom: -25px;
     }
+
+    .nav_otsikko {
+    font-size: 24px;
+    /* Pienennetty fonttikokoa mobiilikäyttöön */
+    }
 }
 
 @media (max-width: 480px) {
@@ -80,6 +85,11 @@ p.info {
     p.info {
         font-size: 32px;
         margin-bottom: -18px;
+    }
+
+    .nav_otsikko {
+    font-size: 20px;
+    /* Entisestään pienennetty fonttikokoa pienimmille näytöille */
     }
 }
 
