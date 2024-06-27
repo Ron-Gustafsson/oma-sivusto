@@ -56,8 +56,6 @@ p.info {
 @media (max-width: 768px) {
     .otsikko {
         font-size: 48px;
-        margin-top: -20px;
-        /* Säädä marginaalia mobiilikäyttöön */
     }
 
     p.info {
@@ -72,13 +70,20 @@ p.info {
     .nav_otsikko {
     font-size: 36px;
     /* Pienennetty fonttikokoa mobiilikäyttöön */
+    text-align: center;
+    }
+
+    .main_container {
+    width: 95%;
+    /* Leventää mainia mobiilissa */
+    padding: 10px;
+    /* Pienentää sisätilaa */
     }
 }
 
 @media (max-width: 480px) {
     .otsikko {
         font-size: 40px;
-        margin-top: -10px;
         /* Säädä marginaalia pienimmille näytöille */
     }
 
@@ -90,6 +95,14 @@ p.info {
     .nav_otsikko {
     font-size: 36px;
     /* Entisestään pienennetty fonttikokoa pienimmille näytöille */
+    text-align: center;
+    }
+
+    .main_container {
+    width: 95%;
+    /* Leventää mainia mobiilissa */
+    padding: 10px;
+    /* Pienentää sisätilaa */
     }
 }
 
@@ -177,6 +190,12 @@ main {
     width: 80%; /* Voit säätää leveyttä tarpeen mukaan */
     margin: 0 auto; /* Keskittää sisällön vaakasuunnassa */
     padding: 20px; /* Lisää tilaa ympärille */
+    /* Lisää reunoille varjo */
+    box-shadow:
+        10px 0 10px rgba(0, 0, 0, 0.1),
+        /* Varjo oikealle */
+        -10px 0 10px rgba(0, 0, 0, 0.1);
+        /* Varjo vasemmalle */
 }
 
 .main_perus  {
