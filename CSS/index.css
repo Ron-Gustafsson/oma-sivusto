@@ -87,6 +87,7 @@ p.info {
     .footer {
     font-size: 24px;
     padding: 8px 0;
+    margin-bottom: -20px; /* Nosta tekstiä ylöspäin vielä enemmän */
     }
     
     .footer-text {
@@ -138,6 +139,7 @@ p.info {
     .footer {
     font-size: 18px;
     padding: 6px 0;
+    margin-bottom: -20px; /* Nosta tekstiä ylöspäin vielä enemmän */
     }
     
     .footer-text {
