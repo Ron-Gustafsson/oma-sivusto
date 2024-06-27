@@ -252,5 +252,9 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(animate); // Pyyntö seuraavalle animaatiokehitykselle
     }
 
-    animate(); // Käynnistetään animaatio
+    // Käynnistetään animaatio napin painalluksella
+    document.getElementById("käynnistäNappula").addEventListener("click", function() {
+        animate();
+        this.style.display = "none"; // Piilotetaan nappi kun animaatio käynnistyy
+    });
 });

@@ -8,17 +8,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    color: #24853c;
 }
 
 /* Canvas-tyyli Ambilight-efektillä */
 canvas {
     margin-top: 30px;
     margin-bottom: 30px;
-    background-color: transparent;
+    background-color: black;
     border: solid 15px #25383C;
     border-radius: 15px;
     box-shadow:
@@ -287,5 +284,25 @@ code {
 }
 
 #scrollToTopBtn:hover {
-    background-color: #646464;
+    background-color: #13971e;
+}
+
+/* Käynnistä Animaatio nappula */
+#käynnistäNappula {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #1eb123;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+#käynnistäNappula:hover {
+    background-color: #155a18;
+    box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.3);
 }
