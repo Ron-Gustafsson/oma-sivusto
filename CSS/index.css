@@ -92,6 +92,7 @@ p.info {
     .footer-text {
     font-size: 20px;
     border-width: 4px;
+    margin-bottom: -20px; /* Nosta tekstiä ylöspäin vielä enemmän */
     box-shadow:
         0px 0px 20px 10px rgb(232, 229, 227),
         /* Vaalea varjo ympärille */
@@ -142,8 +143,7 @@ p.info {
     .footer-text {
     font-size: 16px;
     border-width: 2px;
-    margin-bottom: -20px;
-    /* Nosta tekstiä ylöspäin vielä enemmän */
+    margin-bottom: -20px; /* Nosta tekstiä ylöspäin vielä enemmän */
     box-shadow:
         0px 0px 15px 5px rgb(232, 229, 227),
         /* Vaalea varjo ympärille */
