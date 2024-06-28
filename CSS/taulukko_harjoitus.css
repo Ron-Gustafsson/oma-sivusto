@@ -102,3 +102,80 @@ p span {
 .back-button:hover {
     background-color: #0b28e4; /* Tummempi sininen väri hover-tilassa */
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .otsikko {
+        font-size: 48px;
+        margin-top: 20px;
+    }
+
+        .footer {
+            font-size: 18px;
+            padding: 8px 0 60px 0;
+            /* Lisää vielä enemmän tilaa alareunaan */
+        }
+    
+.footer {
+    font-size: 18px;
+    padding: 8px 0 60px 0;
+    /* Lisää vielä enemmän tilaa alareunaan */
+    }
+        
+    .footer-text {
+    font-size: 16px;
+    /* Pienennetään fonttikokoa */
+    border-width: 1px;
+    /* Pienennetään reunuksen leveyttä */
+    padding: 5px 8px;
+    /* Pienennetään sisäistä tilaa */
+    transform: translateY(-20px);
+    /* Nosta tekstiä ylöspäin */
+    box-shadow:
+        0px 0px 5px 2px rgb(232, 229, 227),
+        /* Pienennetään vaaleaa varjoa */
+        2px 2px 8px rgba(255, 165, 0, 0.9),
+        /* Pienennetään oranssia varjoa oikealle ja alaspäin */
+        -2px -2px 8px rgb(166, 81, 7),
+        /* Pienennetään oranssia varjoa vasemmalle ja ylöspäin */
+        0px 3.5px 5px rgba(234, 101, 6, 0.998),
+        /* Pienennetään alapuolen varjoa */
+        0px -3.5px 5px rgba(112, 50, 3, 0.963);
+        /* Pienennetään yläpuolen varjoa */
+    } 
+}
+
+@media (max-width: 480px) {
+    .otsikko {
+        font-size: 40px;
+        /* Säädä marginaalia pienimmille näytöille */
+    }
+
+    .footer {
+        font-size: 16px;
+        padding: 8px 0 60px 0;
+        /* Lisää vielä enemmän tilaa alareunaan */
+    }
+    
+    .footer-text {
+    font-size: 14px;
+    /* Pienennetään fonttikokoa */
+    border-width: 1px;
+    /* Pienennetään reunuksen leveyttä */
+    padding: 5px 8px;
+    /* Pienennetään sisäistä tilaa */
+    transform: translateY(-20px);
+    /* Nosta tekstiä ylöspäin */
+    box-shadow:
+        0px 0px 5px 2px rgb(232, 229, 227),
+        /* Pienennetään vaaleaa varjoa */
+        2px 2px 8px rgba(255, 165, 0, 0.9),
+        /* Pienennetään oranssia varjoa oikealle ja alaspäin */
+        -2px -2px 8px rgb(166, 81, 7),
+        /* Pienennetään oranssia varjoa vasemmalle ja ylöspäin */
+        0px 3.5px 5px rgba(234, 101, 6, 0.998),
+        /* Pienennetään alapuolen varjoa */
+        0px -3.5px 5px rgba(112, 50, 3, 0.963);
+        /* Pienennetään yläpuolen varjoa */
+    }
+}
