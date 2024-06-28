@@ -85,29 +85,32 @@ p.info {
     }
 
     .footer {
-    
-    padding: 8px 0 40px 0;
-        /* Lisää tilaa alareunaan */
-    }
-    
-    .footer-text {
     font-size: 18px;
-    border-width: 2px; /* Pienennä reunuksen leveys */
-    padding: 5px 10px; /* Lisää hieman sisäistä tilaa */
-    transform: translateY(-30px);
+    padding: 8px 0 60px 0;
+    /* Lisää vielä enemmän tilaa alareunaan */
+    }
+        
+    .footer-text {
+    font-size: 16px;
+    /* Pienennetään fonttikokoa */
+    border-width: 1px;
+    /* Pienennetään reunuksen leveyttä */
+    padding: 5px 8px;
+    /* Pienennetään sisäistä tilaa */
+    transform: translateY(-20px);
     /* Nosta tekstiä ylöspäin */
     box-shadow:
-        0px 0px 10px 5px rgb(232, 229, 227),
-        /* Pienennetty vaalea varjo ympärille */
-        4px 4px 15px rgba(255, 165, 0, 0.9),
-        /* Pienennetty oranssi varjo oikealle ja alaspäin */
-        -4px -4px 15px rgb(166, 81, 7),
-        /* Pienennetty oranssi varjo vasemmalle ja ylöspäin */
-        0px 7.5px 10px rgba(234, 101, 6, 0.998),
-        /* Pienennetty alapuolen varjo */
-        0px -7.5px 10px rgba(112, 50, 3, 0.963);
-        /* Pienennetty yläpuolen varjo */
-    }
+        0px 0px 5px 2px rgb(232, 229, 227),
+        /* Pienennetään vaaleaa varjoa */
+        2px 2px 8px rgba(255, 165, 0, 0.9),
+        /* Pienennetään oranssia varjoa oikealle ja alaspäin */
+        -2px -2px 8px rgb(166, 81, 7),
+        /* Pienennetään oranssia varjoa vasemmalle ja ylöspäin */
+        0px 3.5px 5px rgba(234, 101, 6, 0.998),
+        /* Pienennetään alapuolen varjoa */
+        0px -3.5px 5px rgba(112, 50, 3, 0.963);
+        /* Pienennetään yläpuolen varjoa */
+    } 
 }
 
 @media (max-width: 480px) {
@@ -139,30 +142,31 @@ p.info {
     }
 
     .footer {
-    
-    padding: 8px 0 40px 0;
-        /* Lisää tilaa alareunaan */
+        font-size: 16px;
+        padding: 8px 0 60px 0;
+        /* Lisää vielä enemmän tilaa alareunaan */
     }
     
     .footer-text {
-    font-size: 18px;
-    border-width: 2px;
-    /* Pienennä reunuksen leveys */
-    padding: 5px 10px;
-    /* Lisää hieman sisäistä tilaa */
-    transform: translateY(-30px);
+    font-size: 14px;
+    /* Pienennetään fonttikokoa */
+    border-width: 1px;
+    /* Pienennetään reunuksen leveyttä */
+    padding: 5px 8px;
+    /* Pienennetään sisäistä tilaa */
+    transform: translateY(-20px);
     /* Nosta tekstiä ylöspäin */
     box-shadow:
-        0px 0px 10px 5px rgb(232, 229, 227),
-        /* Pienennetty vaalea varjo ympärille */
-        4px 4px 15px rgba(255, 165, 0, 0.9),
-        /* Pienennetty oranssi varjo oikealle ja alaspäin */
-        -4px -4px 15px rgb(166, 81, 7),
-        /* Pienennetty oranssi varjo vasemmalle ja ylöspäin */
-        0px 7.5px 10px rgba(234, 101, 6, 0.998),
-        /* Pienennetty alapuolen varjo */
-        0px -7.5px 10px rgba(112, 50, 3, 0.963);
-        /* Pienennetty yläpuolen varjo */
+        0px 0px 5px 2px rgb(232, 229, 227),
+        /* Pienennetään vaaleaa varjoa */
+        2px 2px 8px rgba(255, 165, 0, 0.9),
+        /* Pienennetään oranssia varjoa oikealle ja alaspäin */
+        -2px -2px 8px rgb(166, 81, 7),
+        /* Pienennetään oranssia varjoa vasemmalle ja ylöspäin */
+        0px 3.5px 5px rgba(234, 101, 6, 0.998),
+        /* Pienennetään alapuolen varjoa */
+        0px -3.5px 5px rgba(112, 50, 3, 0.963);
+        /* Pienennetään yläpuolen varjoa */
     }
 }
 
