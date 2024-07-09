@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirpputaulu</title>
+    <link rel="stylesheet" href="kirpputaulu.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tässä on kirpputaulukko jQueryllä</h1>
+        <p>Nappia klikkaamalla kirppu hyppää seuraavan ruutuun <button>Nappi</button></p>
+    
+        <table class="kirpputaulu">
+            <tr>
+                <th colspan="4">Kalle Kirpun seikkailut</th>
+            </tr>
+            <tr>
+                <td class="flea hyppy kirppu"><p>Kalle on innoissaan matkastaan ja odottaa jo kovasti seikkailuaan</p></td>
+                <td class="flea sininen"><p>Näin näppärästi Kalle hyppää. - "Tämähän on kivaa", Kalle tokaisee.</p></td>
+                <td class="flea hyppy"><p>Kallen seuraavassa etapissa hän kohtaa pienen hämähäkin, joka yllättää hänet</p></td>
+                <td class="flea sininen"><p>Yllätyksestä toivuttuaan Kalle jatkaa matkaansa entistä uteliaampana.</p></td>
+            </tr>
+            <tr>
+                <td class="flea sininen">
+                    <p>Kalle törmää polulla ystävälliseen leppäkerttuun, joka kertoo hänelle salaperäisestä luolasta lähistöllä.</p>
+                </td>
+                <td class="flea hyppy">
+                    <p>Uteliaana seikkailijana Kalle päättää tutkia luolan, vaikka jännitys kutkuttaa vatsanpohjaa.</p>
+                </td>
+                <td class="flea sininen">
+                    <p>Luolassa Kalle löytää vanhan laatikon, joka sisältää salaisen kartan seuraavaan seikkailuun.</p>
+                </td>
+                <td class="flea hyppy">
+                    <p>Kalle on innoissaan kartasta ja miettii jo uutta seikkailuaan. Ensin pitää toipua tästä hyppelystä..</p>
+                </td>
+            </tr>
+        </table>
+        <a href="../index.html" class="back-button">Palaa etusivulle</a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="kirpputaulu.js"></script>
+</body>
+
+</html>

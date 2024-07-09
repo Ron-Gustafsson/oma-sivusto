@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery aloitus</title>
+
+    <!-- Ulkoinen CSS-tiedosto -->
+    <link rel="stylesheet" href="malli.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- kaikki sivulla näkyvä tulee bodyn sisään -->
+    <header>
+      <div class="container">
+        <h1>jQuery 2024</h1>
+      </div>
+    </header>
+
+    <main>
+      <section id="container">
+        <h2>Tarina kissasta nimeltä Maakus</h2>
+        <p>Syvällä metsässä, pimeän lehmuksen varjossa, asui karvaton Sfinx-kissa nimeltä Maakus. Maakus oli kaukana tavallisista kissoista; sen karvattomuus teki siitä eriskummallisen ja todella pelottavan näköisen. Maakus oli niin ruma, että jopa häntä itseään puistatti jo pelkkä ajatus peilikuvastaan. Kyläläiset kertoivat tarinoita, kuinka Maakus vaani öisin uhrejansa ja se herätti kylän asukkaissa pelonsekaisia tunteita. <br><br>
+      
+        Eräänä yönä Maakus päätti lähteä metsästä ja pelottava hahmo ilmestyi kylän reunamille. Sen silmät hohtivat, kuin itse paholaisella pimeässä, ja sen terävät korvat kuulivat jokaisen askeleen. Se kiipesi talojen katoille, tarkkaillen asukkaita ja levittäen kauhua kaikkialle, jonne Maakuksen varjo laskeutui.  <br><br>
+
+        Kylän asukkaat olivat aluksi kauhistuneita näkemästään, mutta, kun aikaa kului niin he päättivät lopulta selvittää Maakuksen pelottavia tarkoitusperiä. He kokosivat rohkeimmat ja viisaimmat, jotka uskaltautuivat metsään etsimään Sfinx-kissaa. He löysivät Maakuksen vanhasta luolasta, jossa se istui yksinäisyydessään, surullisena ja eksyneen näköisenä. <br><br>
+
+        Kun kyläläiset ymmärsivät, että Maakus oli vain yksinäinen olento, joka kaipasi ystävyyttä ja hyväksyntää, he päättivät lopulta ottaa sen vastaan ja veivät olennon kylän liepeille. He loivat sille lämpimän pesän kylän laidalle ja alkoivat hoitaa sitä. Maakus löysi vähitellen paikkansa kylässä, ja sen karvattomuus ei enää ollut pelottava piirre Maakuksessa vaan kiehtova ja ainutlaatuinen asia, joka teki siitä erityisen. Vielä tänäkin päivänä Maakus elää yhteisessä harmoniassa kylän asukkaiden kanssa ja kaikki ovat siitä onnellisia.
+        <br><br>
+
+       <b>Opetus:</b> <br>
+        Tarina karvattomasta Sfinx-kissasta nimeltä Maakus opettaa meille, että ulkonäkö voi pettää ja, että jokaisella
+        sielulla on tarkoitusperänsä sekä syvemmät tarpeensa ja tunteensa. Se rohkaisee meitä kohtaamaan pelkomme ja ennakkoluulomme avoimin mielin, ja ymmärtämään, että kauhistuttavimmankin ulkokuoren alla voi piillä ystävällinen sydän ja Maakuksen sydän oli puhdasta kultaa.
+      </p>
+
+        <p id="kissaosio">Kisu kisu, tule esiin? <br>
+          <img id="kissa" src="jQueryKissa.PNG" style="display:none;">
+        </p>
+
+        <a href="#" onclick="$('#kissa').toggle();
+          return false;">Klikkaa kuva esiin!</a>
+        <!-- return falsella ei siirry linkistä eteenpäin -->
+        <br>
+        <a href="#" onclick="$('#kissaosio').css('background-color', 'black');
+      		return false;">Musta tausta</a>
+        <br>
+        <a href="#" onclick="$('#kissaosio').css('background-color', 'red');
+      		return false;">Punainen tausta</a>
+ 
+      </section>
+    </main>
+
+    <footer>
+      <h1>Made by Ron Gustafsson</h1>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-E41FgiPYGU2F2XsZrJ...CWh0o8O9qFjFO4D" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS (vaatii jQueryn) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+      <!-- jQueryn oma koodi -->
+      <script type="text/javascript">
+        $(document).ready(function () {
+          alert("Hello from jQuery");
+          console.log("This is jQuery!");
+        });
+
+      
+
+
+      
+
+      </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,111 @@
+.kirpputaulu {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.kirpputaulu th {
+    border: 4px solid rgb(114, 2, 226);
+    text-align: center;
+    font-size: 32px;
+    background-color: #FFA500;
+    color: rgb(230, 1, 1);
+    height: 130px;
+    padding: 10px;
+}
+
+.kirpputaulu td {
+    border: 2px solid rgb(248, 0, 0);
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+    word-wrap: break-word;
+    /* Pakota sanan katkeaminen, jos se on liian pitkä */
+}
+
+.kirppu {
+    background-image: url("kirppu_läpinäkyvä.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    height: 100px;
+    /* Säädä tarvittaessa */
+    width: 100px;
+    /* Säädä tarvittaessa */
+}
+
+.kirpputaulu .flea {
+    border: 2px solid rgb(248, 0, 0);
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Comic Sans MS", cursive;
+
+}
+
+.kirpputaulu .flea:nth-child(odd) {
+    background-color: #FFC0CB;
+    color: green;
+       
+}
+
+.kirpputaulu .flea:nth-child(even) {
+    background-color: #00FFFF;
+    color: red;
+}
+
+.kirpputaulu .flea p {
+    margin-top: 100px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #0b28e4;
+}
+
+.container {
+    background-color: #98AFC7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: orange;
+}
+
+@media only screen and (max-device-width: 360px) {
+
+    /* Tähän tulee pienemmät näytön koko */
+    .container {
+        padding: 5px;
+    }
+
+    .kirpputaulu th {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .kirpputaulu .flea {
+        font-size: 12px;
+    }
+
+    .kirpputaulu .flea p {
+        margin-top: 80px;
+        margin-bottom: 5px;
+    }
+}

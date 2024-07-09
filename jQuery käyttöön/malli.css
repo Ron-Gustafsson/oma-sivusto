@@ -1,0 +1,117 @@
+/* Yleiset perusasetukset */
+* {
+  box-sizing: border-box;
+  /* Huomioi reunat ja täytöt elementin leveydessä ja korkeudessa */
+  margin: 0;
+  padding: 0;
+}
+
+/* Body perusasetukset */
+body {
+  font-family: 'Calibri', 'Arial', sans-serif;
+  color: #fff;
+  /* Valkoinen teksti paremman kontrastin vuoksi */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  /* Parempi tekstin luettavuus */
+}
+
+/* Header perusasetukset */
+header {
+  background-color: #333;
+  /* Tummanharmaa tausta */
+  color: #fff;
+  /* Valkoinen teksti */
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 2px solid #444;
+  /* Erottava alareuna */
+}
+
+/* Footer perusasetukset */
+footer {
+  background-color: #333;
+  /* Tummanharmaa tausta */
+  color: #fff;
+  /* Valkoinen teksti */
+  text-align: center;
+  padding: 1em 0;
+  border-top: 2px solid #444;
+  /* Erottava yläreuna */
+  margin-top: auto;
+}
+
+/* Otsikot käyttäen Playfair Display -fonttia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', Lato, serif;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+/* Kontenttialueen perusasetukset */
+main {
+  flex: 1;
+  background-color: #25383C;
+    /* Dark Slate Gray */
+  padding: 20px;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #BCC6CC;
+  /* Metallic silver tausta */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #25383C;
+  /* Tummanharmaa teksti */
+}
+
+/* Responsiivinen asettelu */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header,
+  footer {
+    padding: 10px 0;
+  }
+
+    #container {
+      padding: 10px;
+    }
+}
+
+/* Linkkien perusasetukset */
+a {
+  color: #1E90FF;
+  /* DodgerBlue */
+  text-decoration: none;
+}
+
+#kissaosio {
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  
+}
+
+#kissa {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
