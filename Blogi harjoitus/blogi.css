@@ -40,7 +40,7 @@ header {
   /* Platinum teksti */
   text-align: center;
   padding: 1em 0;
-  border-bottom: 2px solid #E5E4E2;
+  border: 2px solid #E5E4E2; /* Platinum reunaviivat joka puolelle */
   /* Erottava alareuna */
   width: 100%;
 }
@@ -51,7 +51,7 @@ footer {
   color: #E5E4E2; /* Platinum teksti */
   text-align: center;
   padding: 1em 0;
-  border-top: 2px solid #E5E4E2; /* Erottava yläreuna */
+  border: 2px solid #E5E4E2; /* Platinum reunaviivat joka puolelle */
   margin-top: auto;
   width: 100%;
 }
