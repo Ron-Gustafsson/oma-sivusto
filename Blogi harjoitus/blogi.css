@@ -201,7 +201,7 @@ a {
   /* Gradientti tausta Dark Slate Grey -sävyt */
   color: #FFF;
   font-weight: bold;
-  /* Lihavoitu teksti */
+    /* Lihavoitu teksti */
   text-decoration: none;
   border: 2px solid #1F3F3F;
   /* Tumma reunus */
@@ -209,7 +209,7 @@ a {
   /* Pyöristetyt kulmat */
   transition: background 0.2s ease, transform 0.2s ease;
   /* Sujuva siirtymä */
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
   /* Teksti keskitetty */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -228,7 +228,7 @@ a {
 .back-button {
   display: inline-block;
   padding: 10px 10px;
-  margin-top: 30px;
+  margin-top: 40px;
   background: linear-gradient(135deg, #2F4F4F, #4F7F7F); /* Gradientti tausta Dark Slate Grey -sävyt */
   color: #FFF;
   font-weight: bold;
