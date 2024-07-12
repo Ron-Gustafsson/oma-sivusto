@@ -1,0 +1,226 @@
+/* Yleiset perusasetukset */
+* {
+  box-sizing: border-box;
+  /* Huomioi reunat ja täytöt elementin leveydessä ja korkeudessa */
+  margin: 0;
+  padding: 0;
+}
+
+/* Body perusasetukset */
+body {
+  font-family: 'Playfair Display', 'Calibri', 'Arial', sans-serif;
+  color: #e4cfcf;
+  /* Valkoinen teksti paremman kontrastin vuoksi */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  /* Parempi tekstin luettavuus */
+  width: 60%; /* Kavennetaan sivua ja keskitetään elementit*/
+  margin: 0 auto;
+  background-color: #4C4646; /* Sivujen taustaväri Black Cow */
+}
+
+/* Kontenttialueen perusasetukset */
+main {
+  flex: 1;
+  background-color: #25383C; /* Dark Slate Grey  */
+  /* Dark Slate Gray */
+  padding: 20px;
+  width: 100%;
+  /* Main-osio täyttää koko tilan */ 
+}
+
+/* Header perusasetukset */
+header {
+  font-family: '', 'Calibri', sans-serif;
+  background-color: #34282C;
+  /* Charcoal */
+  color: #E5E4E2;
+  /* Platinum teksti */
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 2px solid #E5E4E2;
+  /* Erottava alareuna */
+  width: 100%;
+}
+
+/* Footer perusasetukset */
+footer {
+  background-color: #34282C; /* Charcoal */
+  color: #E5E4E2; /* Platinum teksti */
+  text-align: center;
+  padding: 1em 0;
+  border-top: 2px solid #E5E4E2; /* Erottava yläreuna */
+  margin-top: auto;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Vogue Regular';
+  src: url('Vogue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Otsikot käyttäen Playfair Display -fonttia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cinzel Decorative', 'Vogue Regular', 'Calibri', sans-serif;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.Blogi {
+  font-family: 'Vogue Regular', 'Calibri', sans-serif;
+  color: #E5E4E2; /* Platinum - tekstin väri */
+  font-size: 4em;
+  text-align: center;
+  width: 90%; /* Elementin leveys suhteessa sivun leveyteen */
+  max-width: 450px; /* Maksimileveys, johon elementti voi kasvaa */
+  margin: 20px auto; /* Pienemmät marginaalit ylhäältä ja alhaalta, keskitetty vaakasuunnassa */
+  background: linear-gradient(135deg, #000000, #5e5a5a);
+  /* Gradientti tausta */
+  border: 2px solid #E5E4E2;
+  border-radius: 10px; /* Pyöristetyt kulmat */
+  box-shadow:
+      -20px 20px 30px rgba(0, 0, 0, 0.5),
+      /* Vasen puoli, tummempi varjo */
+      10px 10px 20px rgba(255, 255, 255, 0.7);
+    /* Oikea puoli, vaaleampi varjo */
+  padding: 20px 10px; /* Lisätty sisätilaa elementin ympärille */
+  line-height: 1.2; /* Pienennetty riviväli */
+
+}
+
+/* Responsiivinen asettelu */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    width: 95%;
+  }
+
+  header,
+  footer {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  #container {
+    padding: 10px;
+  }
+
+  .Blogi {
+    font-size: 28px;
+  }
+}
+
+/* Linkkien perusasetukset */
+a {
+  color: #1E90FF;
+  /* DodgerBlue */
+  text-decoration: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.blog-entry {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  /* Teksti ja ulkonäkö asetukset */
+  font-family: 'Playfair Display', 'Calibri', sans-serif;
+  color: #E5E4E2; /* Platinum - tekstin väri */
+  background: linear-gradient(135deg, #000000, #5e5a5a); /* Gradientti tausta */
+  box-shadow:
+      -20px 20px 30px rgba(0, 0, 0, 0.5),
+      /* Vasen puoli, tummempi varjo */
+      10px 10px 20px rgba(255, 255, 255, 0.7);
+    /* Oikea puoli, vaaleampi varjo */
+
+}
+
+.blog-entry h3 {
+  margin-top: 0;
+}
+
+.blog-entry .date {
+  font-size: 0.9em;
+  color: #4C4646; /* Black Cow */
+}
+
+.blog-entry p {
+  white-space: pre-wrap;
+  /* Tämä säilyttää tekstin rivinvaihdot ja välilyönnit */
+}
+
+.input-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 10px;
+  border: 5px solid #848482; /* Battleship Grey */
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.input-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+#laheta-nappula {
+  display: inline-block;
+  padding: 15px 30px;
+  /* Suuremmat täytteet napille */
+  background: linear-gradient(135deg, #2F4F4F, #4F7F7F);
+  /* Gradientti tausta Dark Slate Grey -sävyt */
+  color: #FFF;
+  font-weight: bold;
+  /* Lihavoitu teksti */
+  text-decoration: none;
+  border: 2px solid #1F3F3F;
+  /* Tumma reunus */
+  border-radius: 10px;
+  /* Pyöristetyt kulmat */
+  transition: background 0.2s ease, transform 0.2s ease;
+  /* Sujuva siirtymä */
+  margin-top: 20px;
+  text-align: center;
+  /* Teksti keskitetty */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Näyttävä varjo */
+}
+
+#laheta-nappula:hover {
+  color: #0C090A; /* Night teksti  */
+  font-weight: bold;
+  background: linear-gradient(150deg, #4C787E, #FAEBD7);
+  /* Tummempi gradientti hover-tilassa - Wintergreen Dream & Antique White  */
+  transform: scale(1.15);
+  /* Pieni suurennus hover-tilassa */
+}

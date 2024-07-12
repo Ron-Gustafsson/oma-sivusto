@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blogi Harjoitus</title>
+
+    <!-- Ulkoinen CSS-tiedosto -->
+    <link rel="stylesheet" href="blogi.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet">
+  </head>
+
+
+
+
+  <body>
+
+    <!-- kaikki sivulla näkyvä tulee bodyn sisään -->
+    <header>
+      <div class="header-ulkoasu">
+        <h1>Blogi-harjoitus JavaScriptilla</h1>
+      </div>
+    </header>
+
+    <main>
+
+      <div id="form-container"></div>
+      <p class="Blogi">My new blog <br> in <br> vogue style</p>
+      <div id="blog-container"></div>
+      <div class="input-group">
+        <label for="blog-date">Päivämäärä:</label>
+        <input type="date" id="blog-date">
+      </div>
+      <div class="input-group">
+        <label for="blog-title">Otsikko:</label>
+        <input type="text" id="blog-title" placeholder="Kirjoita otsikko tähän">
+      </div>
+      <div class="input-group">
+        <label for="blog-content">Blogitekstisi:</label>
+        <textarea id="blog-content" placeholder="Kirjoita sisältö tähän"></textarea>
+      </div>
+
+      <button id="laheta-nappula">Lähetä</button>
+
+    </main>
+
+    <footer>
+      <h1>Made by Ron Gustafsson <br> 2024 &copy;
+      </h1>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-E41FgiPYGU2F2XsZrJ...CWh0o8O9qFjFO4D" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS (vaatii jQueryn) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <!-- Linkitä ulkoinen JavaScript-tiedosto -->
+    <script src="blogi.js"></script> 
+    </script>
+
+  </body>
+
+</html>
