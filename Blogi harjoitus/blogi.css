@@ -224,3 +224,26 @@ a {
   transform: scale(1.15);
   /* Pieni suurennus hover-tilassa */
 }
+
+.back-button {
+  display: inline-block;
+  padding: 10px 10px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #2F4F4F, #4F7F7F); /* Gradientti tausta Dark Slate Grey -sävyt */
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid #1F3F3F;
+  transition: background 0.2s ease, transform 0.2s ease; /* Sujuva siirtymä */
+}
+
+.back-button:hover {
+  color: #0C090A;
+    /* Night teksti  */
+    font-weight: bold;
+    background: linear-gradient(150deg, #4C787E, #FAEBD7);
+    /* Tummempi gradientti hover-tilassa - Wintergreen Dream & Antique White  */
+    transform: scale(1.15);
+    /* Pieni suurennus hover-tilassa */
+}
