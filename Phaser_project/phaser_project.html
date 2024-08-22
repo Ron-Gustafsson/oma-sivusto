@@ -16,7 +16,9 @@
       }
     
       canvas {
-        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     </style>
   </head>
@@ -27,15 +29,15 @@
       class Example extends Phaser.Scene {
         preload() {
           // Ladataan paikalliset kuvat ja esimerkkipartikkeli
-          this.load.image('logo', 'pictures/Betnator 16 9_transparent.png');
-          this.load.image('sky', 'pictures/Terminator betting at arena.png');
-          this.load.image('bill', 'pictures/bill.png');
-          this.load.image('goldBar', 'pictures/goldbar.png');
+          this.load.image('logo', 'pictures/Betnator 16 9_transparent.png'); // Luotu AI:lla
+          this.load.image('sky', 'pictures/Terminator betting at arena.png'); // Luotu AI:lla
+          this.load.image('bill', 'pictures/bill.png'); // Pixabay
+          this.load.image('goldBar', 'pictures/goldbar.png'); // Pixabay
           this.load.image('spark', 'https://labs.phaser.io/assets/particles/yellow.png'); // Käytetään esimerkkipartikkelia
 
           // Ladataan ääniefektit
-          this.load.audio('bounce', 'sounds/8-bit-bounce.wav');
-          this.load.audio('money', 'sounds/money-in-envelope-movement.wav');
+          this.load.audio('bounce', 'sounds/8-bit-bounce.wav'); // Pixabay
+          this.load.audio('money', 'sounds/money-in-envelope-movement.wav'); // Pixabay
         }
 
         create() {
@@ -257,19 +259,26 @@
           }
 
           const config = {
-            type: Phaser.AUTO,
-            width: 1024,
-            height: 768,
-            scene: Example,
-            physics: {
-              default: 'arcade',
-              arcade: {
-                gravity: { y: 400 }
+              type: Phaser.AUTO,
+              width: 1024,
+              height: 768,
+              scene: Example,
+              physics: {
+                default: 'arcade',
+                arcade: {
+                  gravity: { y: 400 }
+                }
+              },
+              scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH,
+                parent: 'phaser-game',
+                width: '100%',
+                height: '100%',
               }
-            }
-          };
+            };
 
-          const game = new Phaser.Game(config);
+            const game = new Phaser.Game(config);
         </script>
     
     </body>
