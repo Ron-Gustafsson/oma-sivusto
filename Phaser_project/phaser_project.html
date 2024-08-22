@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        /* Taustaväri, voit muuttaa halutessasi */
+      }
+    
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <script>
+      class Example extends Phaser.Scene {
+        preload() {
+          // Ladataan paikalliset kuvat ja esimerkkipartikkeli
+          this.load.image('logo', 'pictures/Betnator 16 9_transparent.png');
+          this.load.image('sky', 'pictures/Terminator betting at arena.png');
+          this.load.image('bill', 'pictures/bill.png');
+          this.load.image('goldBar', 'pictures/goldbar.png');
+          this.load.image('spark', 'https://labs.phaser.io/assets/particles/yellow.png'); // Käytetään esimerkkipartikkelia
+
+          // Ladataan ääniefektit
+          this.load.audio('bounce', 'sounds/8-bit-bounce.wav');
+          this.load.audio('money', 'sounds/money-in-envelope-movement.wav');
+        }
+
+        create() {
+          // Aloitusruutu
+          this.showStartScreen();
+        }
+
+        showStartScreen() {
+          // Näytetään "Klikkaa aloittaaksesi" -ruutu
+          const startText = this.add.text(this.sys.game.config.width / 2, this.sys.game.config.height / 2, 'Klikkaa aloittaaksesi', {
+            font: '24px Arial',
+            fill: '#ffffff'
+          }).setOrigin(0.5);
+
+          this.input.once('pointerdown', () => {
+            startText.destroy(); // Poistetaan aloitusteksti
+            this.startGame(); // Aloitetaan peli
+          });
+        }
+
+        showEndScreen() {
+          // Näytetään uudelleen "Klikkaa aloittaaksesi" -ruutu pelin pysäyttämisen jälkeen
+          this.showStartScreen();
+        }
+
+        startGame() {
+
+          // Ääniefektit
+          const bounceSound = this.sound.add('bounce');
+          const moneySound = this.sound.add('money');
+
+          // Keskitä taustakuva (sky) pelikentälle
+          const sky = this.add.image(this.sys.game.config.width / 2, this.sys.game.config.height / 2, 'sky');
+          sky.setOrigin(0.5, 0.5);
+          sky.setDisplaySize(this.sys.game.config.width, this.sys.game.config.height);
+
+          // Keskitä logo pelikentälle
+          this.logo = this.physics.add.image(this.sys.game.config.width / 2, this.sys.game.config.height / 2, 'logo');
+          this.logo.setOrigin(0.5, 0.5);
+          this.logo.setVelocity(100, 200);
+          this.logo.setBounce(1, 1);
+          this.logo.setCollideWorldBounds(true);
+          this.logo.body.onWorldBounds = true;
+
+          // Soita bounce-ääni, kun logo osuu ruudun reunoihin
+          this.physics.world.on('worldbounds', () => {
+            bounceSound.play();
+          });
+
+          this.sparkParticles = [];  // Taulukko partikkeleille
+
+          // Luo partikkelit manuaalisesti ja lisää ne taulukkoon
+          this.time.addEvent({
+            delay: 100,
+            callback: function () {
+              const particle = this.add.image(this.logo.x, this.logo.y + (this.logo.displayHeight / 2.8), 'spark');
+              particle.setScale(Phaser.Math.Between(1, 1));
+              this.sparkParticles.push(particle);
+
+              // Poista partikkeli jonkin ajan kuluttua, jos haluat
+              this.time.delayedCall(1000, () => {
+                particle.destroy();
+                this.sparkParticles = this.sparkParticles.filter(p => p !== particle);  // Poista partikkeli taulukosta
+              });
+            },
+            callbackScope: this,
+            loop: true
+          });
+
+
+          // Lisää setelisade viiveellä
+          const bills = this.add.group({
+            defaultKey: 'bill',
+            maxSize: 100,
+            runChildUpdate: true
+          });
+
+          this.time.delayedCall(3000, () => { // 3 sekunnin viive logon pomppimisen jälkeen
+            this.time.addEvent({
+              delay: 300,  // Kuinka usein uusi seteli luodaan (ms)
+              callback: () => {
+                const bill = bills.get(Phaser.Math.Between(0, this.sys.game.config.width), 0);  // Satunnainen x-sijainti ylhäällä
+                if (bill) {
+                  bill.setActive(true);
+                  bill.setVisible(true);
+                  bill.setScale(0.3);  // Aloituskoko
+
+                  // Soita rahasadeääni, jos se ei ole jo soimassa
+                  if (!moneySound.isPlaying) {
+                    moneySound.play();
+                  }
+
+                  this.tweens.add({
+                    targets: bill,
+                    y: this.sys.game.config.height,  // Putoamispiste y-akselilla
+                    scaleX: 0.8,  // Lopullinen vaakaskaalaus
+                    scaleY: 0.8,  // Lopullinen pystyskaalaus
+                    angle: { from: 0, to: Phaser.Math.Between(-60, 60) },  // Pyöriminen putoamisen aikana
+                    duration: Phaser.Math.Between(3500, 4500),  // Pidempi kesto leijumista varten
+                    ease: 'Cubic.easeOut',  // Hitaampi alku, nopeampi loppu
+                    onComplete: () => {
+                      bills.killAndHide(bill);  // Poista seteli käytöstä animaation jälkeen
+                    }
+                  });
+                }
+              },
+              callbackScope: this,
+              loop: true  // Setelisade jatkuu
+            });
+
+            // Lisää kultaharkkosade, alussa viive on 3 sekuntia, mutta se lyhenee ajan myötä
+            let goldBarDelay = 3000;
+            let lastGoldBarX = null; // Muistetaan viimeisimmän harkon x-sijainti
+
+            this.time.addEvent({
+              delay: 1500,  // 2 sekunnin välein tarkistetaan, tuleeko harkko
+              loop: true,
+              callback: () => {
+                if (Phaser.Math.Between(0, goldBarDelay) < 1000) {  // Mahdollisuus lisätä harkko kasvaa ajan myötä
+                  let xPosition;
+
+                  // Varmista, että uusi harkko ei ilmesty liian lähelle edellistä
+                  do {
+                    xPosition = Phaser.Math.Between(50, this.sys.game.config.width - 50);
+                  } while (lastGoldBarX && Math.abs(xPosition - lastGoldBarX) < 100);
+
+                  lastGoldBarX = xPosition; // Päivitä viimeisin x-sijainti
+
+                  const goldBar = this.add.sprite(xPosition, 0, 'goldBar');
+                  goldBar.setDisplaySize(250, 100);  // Aseta harkon koko
+
+                  this.tweens.add({
+                    targets: goldBar,
+                    y: this.sys.game.config.height,  // Putoamispiste y-akselilla
+                    scaleX: 0.2,  // Lopullinen vaakaskaalaus
+                    scaleY: 0.2,  // Lopullinen pystyskaalaus
+                    angle: Phaser.Math.Between(-180, 180),  // Lisää satunnainen kallistuskulma
+                    duration: Phaser.Math.Between(2000, 5000),  // Nopeampi kesto painavamman efektin aikaansaamiseksi
+                    ease: 'Cubic.easeIn',  // Nopeampi alku, hitaampi loppu
+                    onComplete: () => {
+                      goldBar.destroy();  // Poista kultaharkko, kun se on saavuttanut alaosan
+                    }
+                  });
+
+                  // Lyhennä viivettä ajan myötä (minimissään 1 sekunti)
+                  goldBarDelay = Math.max(2000, goldBarDelay - 500);
+                }
+              },
+              callbackScope: this
+            });
+
+          }, [], this);
+
+          // Lisää ylös palkki, jota klikkaamalla peli lopetetaan
+          const endText = this.add.text(this.sys.game.config.width / 2, 20, 'Klikkaa lopettaaksesi', {
+            font: '20px Arial',
+            fill: '#ffffff'
+          }).setOrigin(0.5);
+
+          // Lisää ajastin pelin kestolle
+          this.time.delayedCall(30000, () => {
+            this.endGame();
+          }, [], this);
+
+          endText.setInteractive(); // Tee tekstistä interaktiivinen
+          endText.on('pointerdown', () => {
+            this.scene.restart(); // Pysäytä peli ja näytä uudestaan "Klikkaa aloittaaksesi" -ruutu
+            this.showEndScreen(); // Näytä loppuruutu
+          });
+        }
+
+        endGame() {
+          // Pysäytä pelin muut elementit
+          this.physics.pause();  // Pysäyttää fysiikan, jolloin logo pysähtyy
+
+          // Pysäytä kaikki ajastimet ja animaatiot
+          this.time.removeAllEvents();  // Poistaa kaikki ajastimet
+          this.tweens.killAll();  // Pysäyttää kaikki animaatiot
+
+          // Poista kaikki spark-partikkelit
+          this.sparkParticles.forEach(particle => {
+            particle.destroy();  // Tuhoa partikkelit
+          });
+          this.sparkParticles = [];  // Tyhjennä taulukko
+
+          // Animaatio, jossa rahat ja harkot lentävät kohti alaosaa ja suurenevat
+          this.children.list.forEach(child => {
+            if (child.texture.key === 'bill' || child.texture.key === 'goldBar') {
+              this.tweens.add({
+                targets: child,
+                x: this.sys.game.config.width / 2,  // Liikkuu kohti ruudun keskiosaa x-akselilla
+                y: this.sys.game.config.height,  // Liikkuu kohti ruudun alaosaa y-akselilla
+                scaleX: 5,  // Kasvata vaakasuunnassa huomattavasti
+                scaleY: 5,  // Kasvata pystysuunnassa huomattavasti
+                alpha: 0,  // Himmenee kohti 0 (läpinäkyvä)
+                duration: Phaser.Math.Between(4500, 6500),  // Satunnainen kesto
+                ease: 'Power2',
+                onComplete: () => {
+                  child.destroy();  // Poista sprite, kun animaatio on valmis
+                }
+              });
+            }
+          });
+
+          // Tee logo hyppäämään keskelle ja pysäytä se siihen
+          this.tweens.add({
+            targets: this.logo,
+            y: this.sys.game.config.height / 2,  // Pidä logo keskellä pystysuunnassa
+            x: this.sys.game.config.width / 2,  // Pidä logo keskellä vaakasuunnassa
+            duration: 1000,
+            ease: 'Power2',
+            onComplete: () => {
+              // Kun logo on paikallaan
+              this.logo.setVelocity(0, 0);  // Pysäytä logon liike
+              this.logo.setBounce(0);  // Poista pomppimisominaisuus
+            }
+          });
+        }
+          }
+
+          const config = {
+            type: Phaser.AUTO,
+            width: 1024,
+            height: 768,
+            scene: Example,
+            physics: {
+              default: 'arcade',
+              arcade: {
+                gravity: { y: 400 }
+              }
+            }
+          };
+
+          const game = new Phaser.Game(config);
+        </script>
+    
+    </body>
+    
+    </html>
