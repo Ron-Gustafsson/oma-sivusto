@@ -12,7 +12,6 @@
         align-items: center;
         height: 100vh;
         background-color: #000;
-        /* Taustaväri, voit muuttaa halutessasi */
       }
     
       canvas {
@@ -164,7 +163,7 @@
 
                   lastGoldBarX = xPosition; // Päivitä viimeisin x-sijainti
 
-                  const goldBar = this.add.sprite(xPosition, 0, 'goldBar');
+                  const goldBar = this.add.sprite(xPosition, -50, 'goldBar');
                   goldBar.setDisplaySize(250, 100);  // Aseta harkon koko
 
                   this.tweens.add({
@@ -191,7 +190,7 @@
 
           // Lisää ylös palkki, jota klikkaamalla peli lopetetaan
           const endText = this.add.text(this.sys.game.config.width / 2, 20, 'Klikkaa lopettaaksesi', {
-            font: '20px Arial',
+            font: '28px Arial',
             fill: '#ffffff'
           }).setOrigin(0.5);
 
