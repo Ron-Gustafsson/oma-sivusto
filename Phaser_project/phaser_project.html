@@ -8,20 +8,49 @@
       body {
         margin: 0;
         display: flex;
+        flex-direction: column; /* Järjestä elementit pystysuunnassa */
         justify-content: center;
         align-items: center;
         height: 100vh;
         background-color: #000;
+        position: relative; /* Aseta body:lle relative-asema, jotta voit käyttää absoluuttista sijaintia */
       }
     
       canvas {
         display: block;
       }
+
+
+      .back-button {
+        display: inline-block;
+        padding: 15px 20px;
+        margin-top: 20px;
+        background: linear-gradient(135deg, #2F4F4F, #4F7F7F); /* Gradientti tausta Dark Slate Grey -sävyt */
+        color: #FFF;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        border: 2px solid #1F3F3F;
+        transition: background 0.2s ease, transform 0.2s ease; /* Sujuva siirtymä */
+        position: absolute;
+        bottom: 20px; /* Sijoittaa napin canvasin alapuolelle */
+        font-size: 24px; /* Lisää fonttikokoa mobiililaitteita varten */
+      }
+
+      .back-button:hover {
+        color: #0C090A;
+          /* Night teksti  */
+          font-weight: bold;
+          background: linear-gradient(150deg, #4C787E, #FAEBD7);
+          /* Tummempi gradientti hover-tilassa - Wintergreen Dream & Antique White  */
+          transform: scale(1.15);
+          /* Pieni suurennus hover-tilassa */
+      } 
     </style>
   </head>
 
   <body>
-
+     
     <script>
       class Example extends Phaser.Scene {
         preload() {
@@ -272,6 +301,10 @@
 
             const game = new Phaser.Game(config);
         </script>
+        
+      
+        <a href="../index.html" class="back-button">Palaa etusivulle</a>
+        
     
     </body>
     
